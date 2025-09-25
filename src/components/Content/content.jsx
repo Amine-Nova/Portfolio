@@ -1,17 +1,17 @@
-import React from 'react'
-import Shine from '../TextShine/textshine'
-
-
-// Basic usage
+import React from "react";
 
 
 const content = () => {
   return (
-    <div>
-        {/* <Shine text="Hello World" />     */}
-        <p className='txt text-6xl sm:text-7xl md:text-9xl font-bold tracking-wide'>Amine</p>
+    <div className='txt text-white font-bold tracking-widest cursor-default leading-tight min-h-[calc(80vh-146px)] pb-20 uppercase flex flex-col gap-4 justify-center items-center select-none'>
+      <p className="text-4xl sm:text-5xl md:text-8xl">
+        Amine
+      </p>
+      <p className="text-4xl sm:text-5xl md:text-8xl">
+        BenMoussa
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default content
+export default content;
