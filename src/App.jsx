@@ -14,7 +14,8 @@ function App() {
       sparkCount={5}
       duration={700}
     >
-      <div style={{width: '100%', height: '200%',  position: "absolute" }}>
+      <section className="w-full flex flex-col items-center relative">
+      <div style={{width: '100%', height: '100%',  position: "absolute" }}>
         <LiquidEther
           colors={["#2e2946", "#16141e", "#3c3464"]}
           mouseForce={20}
@@ -26,14 +27,13 @@ function App() {
           resolution={0.5}
           isBounce={false}
           autoDemo={true}
-          autoSpeed={0.5}
+          autoSpeed={0.3}
           autoIntensity={2.2}
           takeoverDuration={0.25}
           autoResumeDelay={3000}
           autoRampDuration={0.6}
         />
       </div>
-      <section className="w-full flex flex-col items-center relative">
         <div className="relative w-full flex flex-col items-center gap-20">
           <MainSection />
         </div>
