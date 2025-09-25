@@ -3,14 +3,15 @@
 @tailwind utilities;
 
 body {
-  background-color: #161420;
+  background-color: #121a29;
+  /* background-color: #16141e; */
 }
 
 .num {
   font-family: "Inter", serif;
   font-optical-sizing: auto;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 37px;
 }
 
 .txt {
@@ -18,3 +19,7 @@ body {
   font-weight: 700;
 }
 
+.lighttxt {
+  font-family: "Inter", serif;
+  font-weight: 300;
+}
