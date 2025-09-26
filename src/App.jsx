@@ -3,7 +3,7 @@ import MainSection from "./components/section1/mainSection";
 import ClickSpark from "./components/spark/spark";
 import LiquidEther from "./components/Backgrounds/rails";
 import SecondSection from "./components/SecondSection/second";
-
+import Threads from "./components/Backgrounds/lightup";
 
 // With custom prop values
 function App() {
@@ -16,8 +16,9 @@ function App() {
       sparkCount={5}
       duration={700}
     >
-      <section className="w-full flex flex-col items-center relative b">
-        <div style={{ width: "100%", height: "100%", position: "absolute" }}>
+      <main className="w-full flex flex-col items-center gap-20 max-w-full overflow-hidden">
+
+        <div style={{ position: 'absolute'}} className="w-full h-full z-10">
           <LiquidEther
             colors={["#2e2946", "#16141e", "#3c3464"]}
             mouseForce={20}
@@ -34,16 +35,18 @@ function App() {
             takeoverDuration={0.25}
             autoResumeDelay={3000}
             autoRampDuration={0.6}
-          />
+            />
         </div>
-        <div className="relative w-full flex flex-col items-center gap-20">
+      <section className="w-full flex flex-col items-center relative">
           <MainSection />
-        </div>
       </section>
-      <section className="w-full flex flex-col item-center relative">
+      <section className=" flex flex-col item-center relative">
         <SecondSection />
       </section>
+      </main>
     </ClickSpark>
   );
 }
+
+//2583
 export default App;

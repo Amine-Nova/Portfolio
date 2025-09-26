@@ -2,7 +2,7 @@ import React from 'react'
 
 const welcome = () => {
     return (
-        <div className='flex item-baseline group cursor-default relative gap-3'>
+        <div className='flex item-baseline group cursor-default relative gap-3 z-10'>
             <div>
                 <p className='text-3xl sm:text-5xl transition-all ease-in-out duration-1000 absolute group-hover:opacity-0'>🌑</p>
                 <p className='text-3xl sm:text-5xl group-hover:scale-90 transition-all ease-in-out duration-1000 group-hover:rotate-25 inset-0 opacity-0 group-hover:opacity-100'>🌒</p>
