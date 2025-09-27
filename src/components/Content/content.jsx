@@ -2,14 +2,6 @@ import React, { useEffect, useState } from "react";
 import SplitText from "../Animations/text";
 
 const Content = () => {
-  const [text, setText] = useState(false);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setText(true);
-    }, 2000); // delay in ms (2s)
-
-    return () => clearTimeout(timer); // cleanup
-  }, []);
   const handleAnimationComplete = () => {
     console.log("All letters have animated!");
   };
@@ -31,7 +23,6 @@ const Content = () => {
           onLetterAnimationComplete={handleAnimationComplete}
         />
         <p className="text-4xl tracking-wide sm:text-5xl md:text-8xl">
-          {text && (
             <SplitText
               text={`Amine Here!`}
               className="text-4xl tracking-wide sm:text-5xl md:text-8xl"
@@ -46,7 +37,6 @@ const Content = () => {
               textAlign="center"
               onLetterAnimationComplete={handleAnimationComplete}
             />
-          )}
         </p>
       </div>
       <div className="flex justify-center items-center pb-12 rounded"></div>
