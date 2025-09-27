@@ -15,22 +15,22 @@ function App() {
       sparkCount={5}
       duration={700}
     >
-
       <main className="w-full flex flex-col items-center max-w-full overflow-hidden">
+        <div className="relative w-full">
           <div style={{ position: "absolute" }} className="w-full h-full z-10">
             <LiquidEther
               colors={["#2e2946", "#16141e", "#3c3464"]}
               mouseForce={20}
               cursorSize={100}
-              isViscous={false}
+              isViscous={true}
               viscous={30}
               iterationsViscous={32}
               iterationsPoisson={32}
               resolution={0.5}
               isBounce={false}
               autoDemo={true}
-              autoSpeed={0.3}
-              autoIntensity={2.2}
+              autoSpeed={0.2}
+              autoIntensity={6}
               takeoverDuration={0.25}
               autoResumeDelay={3000}
               autoRampDuration={0.6}
@@ -42,11 +42,11 @@ function App() {
           <section className="bg flex flex-col w-full item-center relative">
             <SecondSection />
           </section>
-          <div className="w-full h-[40vh] bg-gradient-to-b from-[#121a29] to-[#1c2431]"></div>
-          <div className="w-full h-[40vh] bg-gradient-to-b from-[#1c2431] to-[#2c323b]"></div>
-          <div className="w-full h-[40vh] bg-gradient-to-b from-[#2c323b] to-[#566171]"></div>
-        <section className="w-full bg-blue-500">
-        </section>
+        </div>
+        <div className="w-full h-[40vh] bg-gradient-to-b from-[#121a29] to-[#1c2431]"></div>
+        <div className="w-full h-[40vh] bg-gradient-to-b from-[#1c2431] to-[#2c323b]"></div>
+        <div className="w-full h-[40vh] bg-gradient-to-b from-[#2c323b] to-[#566171]"></div>
+        <section className="w-full bg-blue-500"></section>
       </main>
     </ClickSpark>
   );
