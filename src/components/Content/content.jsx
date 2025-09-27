@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import SplitText from "../Animations/text";
 
 const Content = () => {
