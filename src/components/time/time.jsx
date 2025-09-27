@@ -1,5 +1,5 @@
-import React from 'react'
 import { useState, useEffect } from "react";
+import React from 'react'
 
 const Time = () => {
   const [date, setDate] = useState(new Date());
@@ -8,8 +8,6 @@ const Time = () => {
     const timer = setInterval(() => {
       setDate(new Date());
     }, 1000); // update every 1 second
-
-    return () => clearInterval(timer);
   }, []);
   let time = date.toLocaleTimeString('en-US', {
     hour: '2-digit',
