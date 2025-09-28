@@ -1,9 +1,9 @@
 import "./App.css";
 import MainSection from "./components/section1/mainSection";
 import ClickSpark from "./components/spark/spark";
-import LiquidEther from "./components/Backgrounds/rails";
-import SecondSection from "./components/SecondSection/second";
-
+import Text from "./components/HeyText/text";
+import Terminal from "./components/Terminal/terminal";
+import LiquidEther from "./components/Backgrounds/rails"
 // With custom prop values
 function App() {
   return (
@@ -22,35 +22,37 @@ function App() {
               colors={["#2e2946", "#16141e", "#3c3464"]}
               mouseForce={20}
               cursorSize={100}
-              isViscous={true}
+              isViscous={false}
               viscous={30}
               iterationsViscous={32}
               iterationsPoisson={32}
               resolution={0.5}
               isBounce={false}
               autoDemo={true}
-              autoSpeed={0.2}
-              autoIntensity={6}
+              autoSpeed={0.5}
+              autoIntensity={2.2}
               takeoverDuration={0.25}
               autoResumeDelay={3000}
               autoRampDuration={0.6}
             />
           </div>
-          <section className="bg w-full flex flex-col items-center relative">
+          <section className="bg w-full flex flex-col items-center relative pb-14">
             <MainSection />
           </section>
-          <section className="bg flex flex-col w-full item-center relative">
-            <SecondSection />
+          <section className="bg flex flex-col items-center w-full relative bg-gradient-to-b from-[#121a29] to-[#1c2431]">
+            <div className="flex flex-col items-center w-full justify-center relative max-w-full">
+              <Text />
+            </div>
+            <div className="flex flex-col items-center w-full justify-center relative max-w-full">
+              <Terminal />
+            </div>
           </section>
         </div>
-        <div className="w-full h-[40vh] bg-gradient-to-b from-[#121a29] to-[#1c2431]"></div>
-        <div className="w-full h-[40vh] bg-gradient-to-b from-[#1c2431] to-[#2c323b]"></div>
-        <div className="w-full h-[40vh] bg-gradient-to-b from-[#2c323b] to-[#566171]"></div>
+        <div className="w-full h-[40vh] bg-gradient-to-b from-[#1c2431] to-[#1c2440]"></div>
         <section className="w-full bg-blue-500"></section>
       </main>
     </ClickSpark>
   );
 }
 
-//2583
 export default App;
