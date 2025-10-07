@@ -5,7 +5,7 @@ const Time = () => {
   const [date, setDate] = useState(new Date());
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    setInterval(() => {
       setDate(new Date());
     }, 1000); // update every 1 second
   }, []);
