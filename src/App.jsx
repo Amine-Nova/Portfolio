@@ -40,7 +40,7 @@ function App() {
           <section className="bg w-full flex flex-col items-center relative pb-14">
             <MainSection />
           </section>
-          <section className="flex flex-col items-center w-full h-full relative h-[1500px]">
+          <section className="flex flex-col items-center w-full h-full relative h-[60vh] 2xl:h-[90vh] lg:h-[88vh] md:h-[80vh] sm:h-[48vh] h-[38vh]">
             <div className="flex flex-col items-center w-full justify-center relative max-w-full">
               <Text />
             </div>
@@ -48,7 +48,7 @@ function App() {
               <Terminal />
             </div>
           </section>
-        <section className="w-full flex flex-col items-center relative">
+        <section className="w-full flex flex-col items-center relative ">
           <Projects />
         </section>
         </div>
