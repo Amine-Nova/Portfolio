@@ -1,5 +1,6 @@
 import "./App.css";
 import MainSection from "./components/section1/mainSection";
+import Projects from "./components/Projects/projects";
 import ClickSpark from "./components/spark/spark";
 import Text from "./components/HeyText/text";
 import Terminal from "./components/Terminal/terminal";
@@ -21,7 +22,7 @@ function App() {
             <LiquidEther
               colors={["#2e2946", "#16141e", "#3c3464"]}
               mouseForce={20}
-              cursorSize={100}
+              cursorSize={40}
               isViscous={false}
               viscous={30}
               iterationsViscous={32}
@@ -39,17 +40,18 @@ function App() {
           <section className="bg w-full flex flex-col items-center relative pb-14">
             <MainSection />
           </section>
-          <section className="flex flex-col items-center w-full h-full relative">
+          <section className="flex flex-col items-center w-full h-full relative h-[1500px]">
             <div className="flex flex-col items-center w-full justify-center relative max-w-full">
               <Text />
             </div>
-            <div className="flex flex-col items-center w-full justify-center relative max-w-full">
+            <div className="flex flex-col items-center w-full justify-center relative max-w-full ">
               <Terminal />
             </div>
           </section>
+        <section className="w-full flex flex-col items-center relative">
+          <Projects />
+        </section>
         </div>
-        <div className="w-full h-[40vh]"></div>
-        <section className="w-full bg-blue-500"></section>
       </main>
     </ClickSpark>
   );

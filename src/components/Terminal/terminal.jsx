@@ -1,7 +1,21 @@
-import { useRef } from "react";
+import { useState, useRef } from "react";
 
 
 const Terminal = () => {
+  // Time 
+  const [date, setDate] = useState(new Date());
+
+  let time = date.toLocaleTimeString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true
+  })
+
+  let day = date.toLocaleString('en-US', { weekday: 'short' });
+  let month = date.toLocaleString('en-US', { month: 'short' });
+  //////////////////////////////////////////////////////////
+  // DnD
+
   const card = useRef(null);
   let startX = 0;
   let startY = 0;
@@ -38,10 +52,13 @@ const Terminal = () => {
           <div class="ml-2 h-3 w-3 bg-orange-300 rounded-full"></div>
           <div class="ml-2 h-3 w-3 bg-green-500 rounded-full"></div>
       </div>
-      <div class="mt-4 flex">
+      <div className="mt-6 text-neutral-500">
+        <p>Last login: {day} {month}</p>
+      </div>
+      <div className="mt-2 flex">
           <span class="text-green-400">abenmous:~$</span>
           <p class="flex-1 typing items-center pl-2">
-              apt-get hire me 
+               
           </p>
       </div>
   </div>
