@@ -30,8 +30,8 @@ const Terminal = () => {
     document.removeEventListener("mouseup", mouseUp);
   }
   return (
-    <div style={{ top: "-10px"}} ref={card} onMouseDown={mouseDown} className='absolute z-50 flex items-center justify-center p-2 cursor-move'>
-        <div class="w-[600px] h-[200px] coding inverse-toggle px-5 pt-4 shadow-lg text-gray-100 text-sm font-mono subpixel-antialiased 
+    <div ref={card} onMouseDown={mouseDown} className='absolute pt-40 sm:pt-[18vh] md:pt-[21vh] lg:pt-[28vh] z-10 overflow-hidden flex items-center justify-center p-2 cursor-move'>
+        <div class="w-[370px] h-[200px] sm:w-[500px] sm:h-[230px] md:w-[600px] md:h-[260px] lg:w-[700px] coding inverse-toggle px-5 pt-4 shadow-lg text-gray-100 text-sm font-mono subpixel-antialiased 
               bg-gray-800  pb-6 pt-4 rounded-lg leading-normal overflow-hidden">
       <div class="top mb-2 flex justify-start">
           <div class="h-3 w-3 bg-red-500 rounded-full"></div>

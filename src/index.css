@@ -4,6 +4,7 @@
 
 body {
   background-color: #121a29;
+  background: linear-gradient(to bottom, #121a29, #1e2a3a,#1f2c3b);
 }
 
 
@@ -32,5 +33,4 @@ body {
 .hover-diagonal:hover {
   transform: rotate(10deg) translate(10px, 10px);
 }
-
 

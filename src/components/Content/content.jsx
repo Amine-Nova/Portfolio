@@ -5,11 +5,11 @@ const Content = () => {
     console.log("All letters have animated!");
   };
   return (
-    <div className="flex flex-col w-full items-center justify-center txt text-white lg:gap-1 min-h-[calc(80vh-146px)]">
-      <div className="font-bold cursor-default leading-tight  flex gap-4 justify-center items-center select-none">
+    <div className="flex flex-col w-full items-center justify-center txt text-white lg:gap-1 min-h-[calc(80vh-580px)] sm:min-h-[calc(80vh-530px)] md:min-h-[calc(80vh-146px)]">
+      <div className="font-bold cursor-default leading-tight flex xl:gap-4 gap-3 justify-center items-center select-none">
       <SplitText
           text={`👨🏻‍💻`}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl pb-2"
           delay={100}
           duration={0.6}
           ease="power3.out"
@@ -24,7 +24,7 @@ const Content = () => {
         <p className=""></p>
         <SplitText
           text={`Hey, it’s Amine`}
-          className="tracking-wide text-5xl sm:text-6xl md:text-7xl lg:text-8xl pb-2"
+          className="tracking-wide text-[43px] sm:text-6xl md:text-7xl lg:text-8xl pb-2"
           delay={100}
           duration={0.6}
           ease="power3.out"
