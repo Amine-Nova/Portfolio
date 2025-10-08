@@ -4,7 +4,7 @@ import Content from '../Content/content'
 
 const mainSection = () => {
   return (
-    <div className='bg w-full h-[90vh] md:h-[20px] flex flex-col items-center relative'>    
+    <div className='bg w-full h-[90vh] flex flex-col items-center relative'>    
       <Header />
       <Content />
     </div>

@@ -18,7 +18,7 @@ function App() {
       <main className="w-full flex flex-col items-center max-w-full overflow-hidden">
         <div className="relative w-full">
           <div style={{ position: "absolute" }} className="w-full h-full z-10 overflow-hidden">
-            <LiquidEther
+            {/* <LiquidEther
               colors={["#2e2946", "#16141e", "#3c3464"]}
               mouseForce={20}
               cursorSize={100}
@@ -34,7 +34,7 @@ function App() {
               takeoverDuration={0.25}
               autoResumeDelay={3000}
               autoRampDuration={0.6}
-            />
+            /> */}
           </div>
           <section className="bg w-full flex flex-col items-center relative pb-14">
             <MainSection />
