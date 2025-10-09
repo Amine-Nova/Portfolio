@@ -4,7 +4,7 @@ import Projects from "./components/Projects/projects";
 import ClickSpark from "./components/spark/spark";
 import Text from "./components/HeyText/text";
 import Terminal from "./components/Terminal/terminal";
-import LiquidEther from "./components/Backgrounds/rails"
+// import LiquidEther from "./components/Backgrounds/rails"
 // With custom prop values
 function App() {
   return (
@@ -40,7 +40,7 @@ function App() {
           <section className="bg w-full flex flex-col items-center relative pb-14">
             <MainSection />
           </section>
-          <section className="flex flex-col items-center w-full h-full relative h-[60vh] 2xl:h-[68vh] lg:h-[88vh] md:h-[80vh] sm:h-[48vh] h-[38vh]">
+          <section className="flex flex-col items-center w-full h-full relative h-[43em] 2xl:h-[58em] lg:h-[50em] md:h-[50em] sm:h-[46em]">
             <div className="flex flex-col items-center w-full justify-center relative max-w-full">
               <Text />
             </div>
@@ -48,7 +48,8 @@ function App() {
               <Terminal />
             </div>
           </section>
-        <section className="dotted w-full flex flex-col items-center relative h-[50vh]">
+        <section className="w-full flex flex-col items-center relative h-[60em]">
+          <div className="dotted absolute inset-0"></div>
           <Projects />
         </section>
         </div>

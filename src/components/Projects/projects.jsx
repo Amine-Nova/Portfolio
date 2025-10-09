@@ -2,7 +2,9 @@ import React from 'react'
 
 const Projects = () => {
   return (
-    <div>projects</div>
+    <div className='relative'>
+    <p className="segoe text-9xl text-blue-200 capitalize overflow-hidden">projects</p>
+  </div>
   )
 }
 
