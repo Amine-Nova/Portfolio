@@ -34,3 +34,42 @@ body {
   transform: rotate(10deg) translate(10px, 10px);
 }
 
+.squares {
+  width: 100%;
+  height: 100%;
+  --color: rgba(114, 114, 114, 0.3);
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+  background-size: 55px 55px;
+  animation: moveDown 5s linear infinite;
+}
+
+@keyframes moveDown {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 55px;
+  }
+}
+
+.dotted {
+  width: 100%;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.171) 1px, transparent 0);
+  background-size: 20px 20px;
+  background-position: -5px -5px;
+  animation: moveUp 8s linear infinite;
+
+  /* Fade from bottom to top */
+  mask-image: linear-gradient(to top, transparent 0%, white 30%, white 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, white 30%, white 70%, transparent 100%);
+}
+
+@keyframes moveUp {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -55px;
+  }
+}

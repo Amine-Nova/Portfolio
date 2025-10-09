@@ -18,8 +18,8 @@ function App() {
     >
       <main className="w-full flex flex-col items-center max-w-full overflow-hidden">
         <div className="relative w-full">
-          <div style={{ position: "fixed" }} className="w-full h-full z-10 overflow-hidden">
-            <LiquidEther
+          <div style={{ position: "absolute" }} className="w-full h-full z-10 overflow-hidden">
+            {/* <LiquidEther
               colors={["#2e2946", "#16141e", "#3c3464"]}
               mouseForce={20}
               cursorSize={40}
@@ -35,12 +35,12 @@ function App() {
               takeoverDuration={0.25}
               autoResumeDelay={3000}
               autoRampDuration={0.6}
-            />
+            /> */}
           </div>
           <section className="bg w-full flex flex-col items-center relative pb-14">
             <MainSection />
           </section>
-          <section className="flex flex-col items-center w-full h-full relative h-[60vh] 2xl:h-[90vh] lg:h-[88vh] md:h-[80vh] sm:h-[48vh] h-[38vh]">
+          <section className="flex flex-col items-center w-full h-full relative h-[60vh] 2xl:h-[68vh] lg:h-[88vh] md:h-[80vh] sm:h-[48vh] h-[38vh]">
             <div className="flex flex-col items-center w-full justify-center relative max-w-full">
               <Text />
             </div>
@@ -48,7 +48,7 @@ function App() {
               <Terminal />
             </div>
           </section>
-        <section className="w-full flex flex-col items-center relative ">
+        <section className="dotted w-full flex flex-col items-center relative h-[50vh]">
           <Projects />
         </section>
         </div>
