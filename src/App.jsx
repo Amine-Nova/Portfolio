@@ -40,7 +40,7 @@ function App() {
           <section className="bg w-full flex flex-col items-center relative pb-14">
             <MainSection />
           </section>
-          <section className="flex flex-col items-center w-full h-full relative h-[43em] 2xl:h-[58em] lg:h-[50em] md:h-[50em] sm:h-[46em]">
+          <section className="flex flex-col items-center w-full relative h-[43em] 2xl:h-[58em] lg:h-[50em] md:h-[50em] sm:h-[46em]">
             <div className="flex flex-col items-center w-full justify-center relative max-w-full">
               <Text />
             </div>
