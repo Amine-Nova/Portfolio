@@ -45,7 +45,9 @@ function App() {
               <Text />
             </div>
             <div className="flex flex-col items-center w-full justify-center relative max-w-full ">
-              <Terminal />
+              <div className="absolute">
+               <Terminal />
+              </div>
             </div>
           </section>
         <section className="w-full flex flex-col items-center relative h-[60em]">
