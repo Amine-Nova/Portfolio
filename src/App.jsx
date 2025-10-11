@@ -4,6 +4,7 @@ import Projects from "./components/Projects/projects";
 import ClickSpark from "./components/spark/spark";
 import Text from "./components/HeyText/text";
 import Terminal from "./components/Terminal/terminal";
+import Container from "./components/Containers/container";
 // import LiquidEther from "./components/Backgrounds/rails"
 // With custom prop values
 function App() {
@@ -53,6 +54,7 @@ function App() {
         <section className="w-full flex flex-col items-center relative h-[60em]">
           <div className="dotted absolute inset-0"></div>
           <Projects />
+          <Container />
         </section>
         </div>
       </main>

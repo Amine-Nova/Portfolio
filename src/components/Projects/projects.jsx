@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const Projects = () => {
   return (
-    <div className='relative'>
-    <p className="segoe text-4xl sm:text-6xl md:text-7xl lg:text-9xl text-blue-200 capitalize">projects</p>
-  </div>
-  )
-}
+    <div className="relative">
+      <p className="segoe text-4xl sm:text-6xl md:text-7xl lg:text-9xl text-blue-200 capitalize">
+        projects
+      </p>
+    </div>
+  );
+};
 
-export default Projects
+export default Projects;
