@@ -1,38 +1,22 @@
 import React from 'react'
+import Boxes from '../Items/boxes'
+import pongimg from "../../assets/abenmous.png";
+import inceptionimg from "../../assets/abenmous1.png";
+import cub3dimg from "../../assets/abenmous2.png";
+import ftircimg from "../../assets/abenmous3.png";
+import minishellimg from "../../assets/abenmous4.png";
+import pushswapimg from "../../assets/abenmous5.png";
+
 
 const container = () => {
   return (
     <div className='grid grid-cols-3 gap-20 px-4 py-20'>
-      <button className='group relative transition-all ease-in-out fade-in'>
-        <div className='container'>
-            <div className='flex gap-4 py-6 px-8 rounded-3xl h-32 items-center bg-black ring-1 ring-blue-400 relative top-0 left-0 group-hover:-left-2 transition-all ease-in-out'>
-              <img className='w-16 h-16 rounded-sm' src="" alt="" />
-              <div className='flex flex-col gap-1 test-start relative'>
-                <p className='text-blue-200 font-semibold max-w-[20ch] overflow-hodden'>Pong Arena</p>
-              </div>
-            </div>
-        </div>
-      </button>
-      <button className='group relative transition-all ease-in-out fade-in'>
-        <div className='container'>
-            <div className='flex gap-4 py-6 px-8 rounded-3xl h-32 items-center bg-black ring-1 ring-blue-400 relative top-0 left-0 group-hover:-left-2 transition-all ease-in-out'>
-              <img className='w-16 h-16 rounded-sm' src="" alt="" />
-              <div className='flex flex-col gap-1 test-start relative'>
-                <p className='text-blue-200 font-semibold max-w-[20ch] overflow-hodden'>Pong Arena</p>
-              </div>
-            </div>
-        </div>
-      </button>
-      <button className='group relative transition-all ease-in-out fade-in'>
-        <div className='container'>
-            <div className='flex gap-4 py-6 px-8 rounded-3xl h-32 items-center bg-black ring-1 ring-blue-400 relative top-0 left-0 group-hover:-left-2 transition-all ease-in-out'>
-              <img className='w-16 h-16 rounded-sm' src="" alt="" />
-              <div className='flex flex-col gap-1 test-start relative'>
-                <p className='text-blue-200 font-semibold max-w-[20ch] overflow-hodden'>Pong Arena</p>
-              </div>
-            </div>
-        </div>
-      </button>
+      <Boxes name='Pong Arena' src={pongimg} title={''}/>
+      <Boxes name='Inception' src={inceptionimg} title={''}/>
+      <Boxes name='Cub3d' src={cub3dimg} title={''}/>
+      <Boxes name='FT_IRC' src={ftircimg} title={''}/>
+      <Boxes name='MiniShell' src={minishellimg} title={''}/>
+      <Boxes name='Push_Swap' src={pushswapimg} title={''}/>
     </div>
   )
 }
