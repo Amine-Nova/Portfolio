@@ -10,13 +10,13 @@ import pushswapimg from "../../assets/abenmous5.png";
 
 const container = () => {
   return (
-    <div className='grid grid-cols-3 gap-20 px-4 py-20'>
-      <Boxes name='Pong Arena' src={pongimg} title={''}/>
-      <Boxes name='Inception' src={inceptionimg} title={''}/>
-      <Boxes name='Cub3d' src={cub3dimg} title={''}/>
-      <Boxes name='FT_IRC' src={ftircimg} title={''}/>
-      <Boxes name='MiniShell' src={minishellimg} title={''}/>
-      <Boxes name='Push_Swap' src={pushswapimg} title={''}/>
+    <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-20 px-4 py-20'>
+      <Boxes name='Pong Arena' src={pongimg} title={'1337 Cursus'}/>
+      <Boxes name='Inception' src={inceptionimg} title={'1337 Cursus'}/>
+      <Boxes name='Cub3d' src={cub3dimg} title={'1337 Cursus'}/>
+      <Boxes name='FT_IRC' src={ftircimg} title={'1337 Cursus'}/>
+      <Boxes name='MiniShell' src={minishellimg} title={'1337 Cursus'}/>
+      <Boxes name='Push_Swap' src={pushswapimg} title={'1337 Cursus'}/>
     </div>
   )
 }
