@@ -35,9 +35,19 @@ const Boxes = ({ name, src, title }) => {
     {
       popUp && 
       <div onClick={() => setPopUp(false)} className="flex flex-col gap-5 fixed inset-0 z-50 bg-black/50 flex items-center justify-end">
-         <div onClick={(e) => e.stopPropagation()} className="flex bg-white w-[550px] h-[450px] rounded-t-xl justify-end">
+         <div onClick={(e) => e.stopPropagation()} className="flex flex-col bg-white w-[550px] h-[450px] rounded-t-xl justify-start">
+          <div className="flex items-center w-full justify-center">
+            <span className="bg-zinc-100 rounded-full w-[100px] h-2 mt-4 mx-auto"></span>
+          </div>
+          <div className="flex h-32 w-full justify-between px-5">
+            <div>
+              <p className="text-xl text-zinc-300 font-medium">
+              
+              Amine Project's</p>
+            </div>
+              <p className="text-xl text-red-500">helo</p>
+          </div>
          </div>
-         {/* <button className="text-white text-5xl bg-red-600 rounded-xl w-48 h-16" onClick={() => setPopUp(false)}>quit</button> */}
       </div>
     }
     </div>
