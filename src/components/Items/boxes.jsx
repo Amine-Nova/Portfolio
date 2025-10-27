@@ -35,14 +35,14 @@ const Boxes = ({ name, src, title }) => {
     {
       popUp && 
       <div onClick={() => setPopUp(false)} className="flex flex-col gap-5 fixed inset-0 z-50 bg-black/50 flex items-center justify-end">
-         <div onClick={(e) => e.stopPropagation()} className="flex flex-col bg-white w-[550px] h-[450px] rounded-t-xl justify-start">
+         <div onClick={(e) => e.stopPropagation()} className="flex flex-col bg-white w-full max-w-xl h-auto rounded-t-xl justify-start">
           <div className="flex items-center w-full justify-center">
             <span className="bg-zinc-100 rounded-full w-[100px] h-2 mt-4 mx-auto"></span>
           </div>
           <div className="group flex h-32 w-full justify-between px-3">
             <div>
               <p className="flex flex-row text-xl text-zinc-300 font-medium items-center gap-1">
-            <svg className="w-8 group-hover:rotate-90 duration-500" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" 
+            <svg className="w-8 group-hover:rotate-[1.58rad] rotate-[0.8rad] duration-500" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" 
             >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" 
@@ -51,7 +51,7 @@ const Boxes = ({ name, src, title }) => {
             stroke="#D4D4D4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>  
               Amine Project's</p>
             </div>
-            <svg onClick={() => setPopUp(false)} className='mt-1 mr-1 hover:stroke-red-500 duration-300' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4D4D4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x w-6 h-6"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+              <svg onClick={() => setPopUp(false)} className='lucide lucide-x mt-1 mr-1 hover:stroke-red-500 duration-300' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4D4D4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
           </div>
          </div>
       </div>
