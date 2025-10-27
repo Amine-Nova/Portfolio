@@ -1,14 +1,39 @@
 import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import styled from 'styled-components';
 
 const Boxes = ({ name, src, title }) => {
-  const settings = {
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1
-  };
+  const StyledWrapper = styled.div`
+  .container {
+    overflow: auto;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    width: 99%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 1rem;
+    width: 100%;
+  }
+
+  .title {
+    width: 100%;
+    display: inline-block;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    margin: 1rem auto;
+  }`;
+
   const [popUp, setPopUp] = useState(false);
   useEffect(() => {
     document.body.style.overflow = popUp ? "hidden" : "";
@@ -40,7 +65,7 @@ const Boxes = ({ name, src, title }) => {
           <div class="absolute h-full w-full left-1.5 top-1.5 group-hover:left-2 group-hover:top-2 bg-zinc-400 ring-1 ring-zinc-400 group-hover:ring-black -z-20 rounded-3xl transition-all ease-in-out group-hover:bg-[#0BE8F4] shadow-md group-hover:shadow-lg"></div>
         </div>
       </button>
-      { popUp && (
+      {popUp && (
         <div
           onClick={() => setPopUp(false)}
           className="flex flex-col gap-5 fixed inset-0 z-50 bg-black/50 flex items-center justify-end"
@@ -102,36 +127,22 @@ const Boxes = ({ name, src, title }) => {
             </div>
             <div className="px-6 py-7 flex flex-col gap-6">
               <div className="flex gap-5">
-                <img className="w-20 h-20 rounded-sm" src={src} alt=""/>
+                <img className="w-20 h-20 rounded-sm" src={src} alt="" />
                 <div className="flex flex-col gap-1 justify-center">
-                <p className="justtxt text-xl font-semibold">Pong Arena : Ping Pong Game App</p>
+                  <p className="justtxt text-xl font-semibold">
+                    Pong Arena : Ping Pong Game App
+                  </p>
                   <p className="justtxt text-sm text-blue-800">42 Cursus</p>
                 </div>
-                
               </div>
-              <div className="slider-container">
-      <Slider {...settings}>
-        <div >
-        <img className="w-20 h-20 rounded-sm" src={src} alt=""/>
-        </div>
-        <div >
-        <img className="w-20 h-20 rounded-sm" src={src} alt=""/>
-        </div>
-        <div >
-        <img className="w-20 h-20 rounded-sm" src={src} alt=""/>
-        </div>
-        <div >
-        <img className="w-20 h-20 rounded-sm" src={src} alt=""/>
-        </div>
-        <div >
-        <img className="w-20 h-20 rounded-sm" src={src} alt=""/>
-        </div>
-        <div>
-        <img className="w-20 h-20 rounded-sm" src={src} alt=""/>
-        </div>
-      </Slider>
-    </div>
+              <StyledWrapper>
+      <div className="container">
+        <img className="aspect-video h-full rounded-md object-cover inline-block" src="https://ph-files.imgix.net/85ffd59b-1208-4473-b3fa-44fd20d8aab4.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=391&h=220&fit=max" alt="" />
+        
+      </div>
+    </StyledWrapper>
             </div>
+
           </div>
         </div>
       )}
