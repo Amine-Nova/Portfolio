@@ -38,6 +38,7 @@ const Boxes = ({ name, src, title }) => {
   const [popUp, setPopUp] = useState(false);
   const containerRef = useRef(null);
 
+  
   const scroll = (dir = "right") => {
     const el = containerRef.current;
     if (!el) return;
@@ -146,7 +147,7 @@ const Boxes = ({ name, src, title }) => {
                   <button
                     type="button"
                     onClick={() => scroll("left")}
-                    className="absolute left-1 top-1/2 -translate-y-1/2 z-20 bg-white/90 rounded-full p-2 shadow-md"
+                    className="absolute left-1 top-1/2 -translate-y-1/2 z-20 bg-white/70 h-5 w-5 rounded-full pr-[1px] flex items-center pb-0.5 justify-center shadow-md"
                     aria-label="scroll left"
                   >
                     ‹
@@ -154,7 +155,7 @@ const Boxes = ({ name, src, title }) => {
                   <button
                     type="button"
                     onClick={() => scroll("right")}
-                    className="absolute right-1 top-1/2 -translate-y-1/2 z-20 bg-white/90  rounded-full p-2 shadow-md"
+                    className="absolute right-1 top-1/2 -translate-y-1/2 z-20 bg-white/70  h-5 w-5 rounded-full pl-[1px] flex items-center pb-0.5 justify-center shadow-md"
                     aria-label="scroll right"
                   >
                     ›
