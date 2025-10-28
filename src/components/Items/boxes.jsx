@@ -1,66 +1,68 @@
 import React, { useRef, useState } from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Boxes = ({ name, src, title }) => {
   const StyledWrapper = styled.div`
-  .container {
-    margin: 0;
-    overflow: auto;
-    display: flex;
-    scroll-snap-type: x mandatory;
-    width: 100%;
+    .container {
+      margin: 0;
+      overflow: auto;
+      display: flex;
+      scroll-snap-type: x mandatory;
+      width: 100%;
 
-    /* Firefox */
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0,0,0,0.35) transparent;
-    -webkit-overflow-scrolling: touch;
-  }
+      /* Firefox */
+      scrollbar-width: thin;
+      scrollbar-color: rgba(0, 0, 0, 0.35) transparent;
+      -webkit-overflow-scrolling: touch;
+    }
 
-  /* WebKit browsers (Chrome, Safari, Edge) */
-  .container::-webkit-scrollbar {
-    height: 2px; /* horizontal scrollbar thickness */
-    width: 2px;  /* vertical scrollbar thickness */
-  }
-  .container::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.35);
-    border-radius: 9999px;
-  }
-  .container::-webkit-scrollbar-thumb:hover {
-    background: rgba(0,0,0,0.55);
-  }
+    /* WebKit browsers (Chrome, Safari, Edge) */
+    .container::-webkit-scrollbar {
+      height: 2px; /* horizontal scrollbar thickness */
+      width: 2px; /* vertical scrollbar thickness */
+    }
+    .container::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 9999px;
+    }
+    .container::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.55);
+    }
 
-  .card {
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
-    border-radius: 1px;
-    padding: 2rem;
-    margin: 1rem;
-    width: 100%;
-  }
+    .card {
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(7px);
+      -webkit-backdrop-filter: blur(7px);
+      border-radius: 1px;
+      padding: 2rem;
+      margin: 1rem;
+      width: 100%;
+    }
 
-  .title {
-    width: 100%;
-    display: inline-block;
-    word-break: break-all;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: center;
-    margin: 1rem auto;
-  }`;
-  
+    .title {
+      width: 100%;
+      display: inline-block;
+      word-break: break-all;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+      margin: 1rem auto;
+    }
+  `;
 
   const [popUp, setPopUp] = useState(false);
   const containerRef = useRef(null);
 
-  
   const scroll = (dir = "right") => {
     const el = containerRef.current;
     if (!el) return;
     const amount = Math.floor(el.clientWidth * 0.35);
-    el.scrollBy({ left: dir === "left" ? -amount : amount, behavior: "smooth" });
+    el.scrollBy({
+      left: dir === "left" ? -amount : amount,
+      behavior: "smooth",
+    });
   };
   return (
     <div>
@@ -149,7 +151,7 @@ const Boxes = ({ name, src, title }) => {
                 <path d="m6 6 12 12"></path>
               </svg>
             </div>
-            <div className="px-6 pt-2 pb-4 flex flex-col gap-6">
+            <div className="px-6 py-4 pb-4 flex flex-col gap-6">
               <div className="flex gap-5">
                 <img className="w-20 h-20 rounded-sm" src={src} alt="" />
                 <div className="flex flex-col gap-1 justify-center">
@@ -159,7 +161,7 @@ const Boxes = ({ name, src, title }) => {
                   <p className="justtxt text-sm text-blue-800">42 Cursus</p>
                 </div>
               </div>
-             <StyledWrapper>
+              <StyledWrapper>
                 <div className="relative">
                   <button
                     type="button"
@@ -179,17 +181,77 @@ const Boxes = ({ name, src, title }) => {
                   </button>
 
                   <div ref={containerRef} className="container gap-3">
-                    <img className="aspect-video h-40 max-w-full rounded-md object-cover inline-block" src="https://ph-files.imgix.net/85ffd59b-1208-4473-b3fa-44fd20d8aab4.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=391&h=220&fit=max" alt="" />
-                    <img className="aspect-video h-40 rounded-md object-cover inline-block" src="https://ph-files.imgix.net/85ffd59b-1208-4473-b3fa-44fd20d8aab4.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=391&h=220&fit=max" alt="" />
-                    <img className="aspect-video h-40 rounded-md object-cover inline-block" src="https://ph-files.imgix.net/85ffd59b-1208-4473-b3fa-44fd20d8aab4.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=391&h=220&fit=max" alt="" />
-                    <img className="aspect-video h-40 rounded-md object-cover inline-block" src="https://ph-files.imgix.net/85ffd59b-1208-4473-b3fa-44fd20d8aab4.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=391&h=220&fit=max" alt="" />
-                    <img className="aspect-video h-40 rounded-md object-cover inline-block" src="https://ph-files.imgix.net/85ffd59b-1208-4473-b3fa-44fd20d8aab4.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=391&h=220&fit=max" alt="" />
-                    <img className="aspect-video h-40 rounded-md object-cover inline-block" src="https://ph-files.imgix.net/85ffd59b-1208-4473-b3fa-44fd20d8aab4.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=391&h=220&fit=max" alt="" />
+                    <img
+                      className="aspect-video h-40 max-w-full rounded-md object-cover inline-block"
+                      src="https://ph-files.imgix.net/85ffd59b-1208-4473-b3fa-44fd20d8aab4.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=391&h=220&fit=max"
+                      alt=""
+                    />
+                    <img
+                      className="aspect-video h-40 rounded-md object-cover inline-block"
+                      src="https://ph-files.imgix.net/85ffd59b-1208-4473-b3fa-44fd20d8aab4.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=391&h=220&fit=max"
+                      alt=""
+                    />
+                    <img
+                      className="aspect-video h-40 rounded-md object-cover inline-block"
+                      src="https://ph-files.imgix.net/85ffd59b-1208-4473-b3fa-44fd20d8aab4.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=391&h=220&fit=max"
+                      alt=""
+                    />
+                    <img
+                      className="aspect-video h-40 rounded-md object-cover inline-block"
+                      src="https://ph-files.imgix.net/85ffd59b-1208-4473-b3fa-44fd20d8aab4.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=391&h=220&fit=max"
+                      alt=""
+                    />
+                    <img
+                      className="aspect-video h-40 rounded-md object-cover inline-block"
+                      src="https://ph-files.imgix.net/85ffd59b-1208-4473-b3fa-44fd20d8aab4.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=391&h=220&fit=max"
+                      alt=""
+                    />
+                    <img
+                      className="aspect-video h-40 rounded-md object-cover inline-block"
+                      src="https://ph-files.imgix.net/85ffd59b-1208-4473-b3fa-44fd20d8aab4.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=391&h=220&fit=max"
+                      alt=""
+                    />
                   </div>
                 </div>
               </StyledWrapper>
+              <p className="text-sm text-zinc-400">
+                Designed to help content creators identify and capitalize on the
+                most viral moments within their YouTube videos. By analyzing
+                engagement, popularity, our cutting-edge tech pinpoints the
+                segments that resonate most strongly with audiences. Unleash the
+                virality!
+              </p>
             </div>
-
+            <div class="mt-auto flex flex-col gap-2 p-4">
+              <button type="button" class="w-full">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://cmt.itsvg.in"
+                  class="vaul-scrollable"
+                >
+                  <button class="bg-[#1a263b]  text-white inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-external-link w-4 h-4 mr-2"
+                    >
+                      <path d="M15 3h6v6"></path>
+                      <path d="M10 14 21 3"></path>
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    </svg>
+                    Visit
+                  </button>
+                </a>
+              </button>
+            </div>
           </div>
         </div>
       )}
