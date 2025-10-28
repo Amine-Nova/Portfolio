@@ -5,7 +5,7 @@ const Content = () => {
     console.log("All letters have animated!");
   };
   return (
-    <div className="flex flex-col w-full items-center justify-center txt text-white lg:gap-1 min-h-[35em] sm:min-h-[28em] md:min-h-[50em] 2xl:min-h-[calc(100vh-14rem)]">
+    <div className="flex flex-col w-full items-center justify-center txt text-white lg:gap-1 min-h-[35em] sm:min-h-[28em] md:min-h-[50em] 2xl:min-h-[calc(100vh-16rem)]">
       <div className="font-bold cursor-default leading-tight flex xl:gap-4 gap-3 justify-center items-center select-none">
           <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl pb-2">👨🏻‍💻</p>
         <SplitText
