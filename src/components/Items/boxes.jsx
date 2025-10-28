@@ -9,7 +9,24 @@ const Boxes = ({ name, src, title }) => {
     display: flex;
     scroll-snap-type: x mandatory;
     width: 100%;
-    
+
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,0,0,0.35) transparent;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* WebKit browsers (Chrome, Safari, Edge) */
+  .container::-webkit-scrollbar {
+    height: 2px; /* horizontal scrollbar thickness */
+    width: 2px;  /* vertical scrollbar thickness */
+  }
+  .container::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.35);
+    border-radius: 9999px;
+  }
+  .container::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.55);
   }
 
   .card {
@@ -84,7 +101,7 @@ const Boxes = ({ name, src, title }) => {
             <div className="flex items-center w-full justify-center">
               <span className="bg-zinc-100 rounded-full w-[100px] h-2 mt-4 mx-auto"></span>
             </div>
-            <div className="group flex w-full justify-between p-4">
+            <div className="group flex w-full justify-between px-4 py-2">
               <div>
                 <p className="flex flex-row text-xl text-zinc-500 font-bold items-center gap-1">
                   <svg
@@ -132,7 +149,7 @@ const Boxes = ({ name, src, title }) => {
                 <path d="m6 6 12 12"></path>
               </svg>
             </div>
-            <div className="px-6 py-4 flex flex-col gap-6">
+            <div className="px-6 pt-2 pb-4 flex flex-col gap-6">
               <div className="flex gap-5">
                 <img className="w-20 h-20 rounded-sm" src={src} alt="" />
                 <div className="flex flex-col gap-1 justify-center">
