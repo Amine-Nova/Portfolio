@@ -5,7 +5,7 @@ import ClickSpark from "./components/spark/spark";
 import Text from "./components/HeyText/text";
 import Terminal from "./components/Terminal/terminal";
 import Container from "./components/Containers/container";
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 // import LiquidEther from "./components/Backgrounds/rails"
 // With custom prop values
 function App() {
@@ -60,8 +60,8 @@ function App() {
          <section className="w-full flex items-center justify-center py-20">
           </section>
         </div>
-        <SpeedInsights />
       </main>
+      <SpeedInsights />
     </ClickSpark>
   );
 }
