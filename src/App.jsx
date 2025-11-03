@@ -51,11 +51,13 @@ function App() {
               </div>
             </div>
           </section>
-        <section className="w-full flex flex-col items-center relative h-[60em]">
+        <section className="w-full flex flex-col items-center relative">
           <div className="dotted absolute inset-0"></div>
           <Projects />
           <Container />
         </section>
+         <section className="w-full flex items-center justify-center py-20">
+          </section>
         </div>
       </main>
     </ClickSpark>
