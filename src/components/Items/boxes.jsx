@@ -49,9 +49,17 @@ const StyledWrapper = styled.div`
     text-align: center;
     margin: 1rem auto;
   }
-`
-const Boxes = ({ name, src, title, carimage }) => {
-
+`;
+const Boxes = ({
+  name,
+  src,
+  title,
+  header,
+  carimage,
+  description,
+  languages,
+  link,
+}) => {
   const [popUp, setPopUp] = useState(false);
   const containerRef = useRef(null);
   const animationCSS = `
@@ -60,27 +68,22 @@ const Boxes = ({ name, src, title, carimage }) => {
     to   { opacity: 1; }
   }
 
+  /* only translate/scale — do not animate opacity */
   @keyframes fadeUp {
     0% {
-      opacity: 0;
-      transform: translateY(380px) scale(0.98);
+      transform: translateY(450px) scale(0.98);
     }
     100% {
-      opacity: 1;
       transform: translateY(0) scale(1);
     }
   }
 
-  .popup-overlay {
-    animation: overlayFade 1000ms ease forwards;
-  }
-
   .popup-card {
-    animation: fadeUp 700ms cubic-bezier(.16,.84,.24,1) both;
+    animation: fadeUp 800ms cubic-bezier(.16,.84,.24,1) both;
     transform-origin: bottom;
   }
-  `;
 
+`;
 
   const scroll = (dir = "right") => {
     const el = containerRef.current;
@@ -120,7 +123,7 @@ const Boxes = ({ name, src, title, carimage }) => {
         </div>
       </button>
       {popUp && (
-                <div
+        <div
           onClick={() => setPopUp(false)}
           className="popup-overlay fixed inset-0 z-50 bg-black/50 flex items-end justify-center"
         >
@@ -128,9 +131,9 @@ const Boxes = ({ name, src, title, carimage }) => {
             onClick={(e) => e.stopPropagation()}
             className="popup-card w-full max-w-xl bg-white rounded-t-xl flex flex-col h-auto justify-start"
           >
-           <div className="flex items-center w-full justify-center">
-             <span className="bg-zinc-100 rounded-full w-[100px] h-2 mt-4 mx-auto"></span>
-           </div>
+            <div className="flex items-center w-full justify-center">
+              <span className="bg-zinc-100 rounded-full w-[100px] h-2 mt-4 mx-auto"></span>
+            </div>
             <div className="group flex w-full justify-between px-4 py-2">
               <div>
                 <p className="flex flex-row text-xl text-zinc-500 font-bold items-center gap-1">
@@ -179,14 +182,12 @@ const Boxes = ({ name, src, title, carimage }) => {
                 <path d="m6 6 12 12"></path>
               </svg>
             </div>
-            <div className="px-6 py-4 pb-4 flex flex-col gap-6">
+            <div className="px-6 py-4 flex flex-col gap-3">
               <div className="flex gap-5">
                 <img className="w-20 h-20 rounded-sm" src={src} alt="" />
                 <div className="flex flex-col gap-1 justify-center">
-                  <p className="justtxt text-xl font-semibold">
-                    Pong Arena : Ping Pong Game App
-                  </p>
-                  <p className="justtxt text-sm text-blue-800">42 Cursus</p>
+                  <p className="justtxt text-xl font-semibold">{header}</p>
+                  <p className="justtxt text-sm text-blue-800">{title}</p>
                 </div>
               </div>
               <StyledWrapper>
@@ -237,20 +238,17 @@ const Boxes = ({ name, src, title, carimage }) => {
                   </div>
                 </div>
               </StyledWrapper>
-              <p className="text-sm text-zinc-400">
-                Designed to help content creators identify and capitalize on the
-                most viral moments within their YouTube videos. By analyzing
-                engagement, popularity, our cutting-edge tech pinpoints the
-                segments that resonate most strongly with audiences. Unleash the
-                virality!
-              </p>
+              <div className="flex">
+                <p className="text-sm text-blue-500 underline">{languages.join(" | ")}</p>
+              </div>
+              <p className="text-sm text-zinc-400">{description}</p>
             </div>
             <div className="mt-auto flex flex-col gap-2 p-4">
               <button className="w-full">
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://cmt.itsvg.in"
+                  href={link}
                   className="vaul-scrollable"
                 >
                   <span className="bg-[#1a263b]  text-white inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full">
@@ -270,7 +268,7 @@ const Boxes = ({ name, src, title, carimage }) => {
                       <path d="M10 14 21 3"></path>
                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     </svg>
-                    Visit
+                    Project Link
                   </span>
                 </a>
               </button>

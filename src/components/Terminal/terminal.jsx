@@ -10,7 +10,7 @@ const Terminal = () => {
     { minWidth: 553, top: -28, bottom: 140 },
     { minWidth: 0, top: -28, bottom: 100 },
   ];
-  const [date, setDate] = useState(new Date());
+  const [date] = useState(new Date());
 
   let time = date.toLocaleTimeString("en-US", {
     hour: "2-digit",

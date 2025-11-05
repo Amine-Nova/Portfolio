@@ -3,7 +3,7 @@ import React from 'react'
 const social = () => {
   return (
     <div className='flex gap-8 z-10'>
-      <a id='github' href='https://github.com/Amine-Nova' target='_blank'>
+      <a id='github' href='https://github.com/Amine-Nova' target='_blank' rel="noopener noreferrer">
         <svg className="w-6 h-6 stroke-1 scale-[0.9] hover:scale-125 transition-transform duration-500"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -24,7 +24,7 @@ const social = () => {
           </defs>
         </svg>
       </a>
-      <a id='facebook' href='https://www.facebook.com/amine.bm.7393' target='_blank'>
+      <a id='facebook' href='https://www.facebook.com/amine.bm.7393' target='_blank' rel="noopener noreferrer">
         <svg className="w-6 h-6 stroke-1 scale-[0.9] hover:scale-125 transition-transform duration-500"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -38,7 +38,7 @@ const social = () => {
           />
         </svg>
       </a>
-      <a id='linkedin' href='https://www.linkedin.com/in/amine-ben-moussa-3667442a0/' target='_blank'>
+      <a id='linkedin' href='https://www.linkedin.com/in/amine-ben-moussa-3667442a0/' target='_blank' rel="noopener noreferrer">
         <svg className="w-6 h-6 stroke-1 scale-[0.9] hover:scale-125 transition-transform duration-500"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -52,7 +52,7 @@ const social = () => {
           />
         </svg>
       </a>
-      <a id='instagram' href='https://www.instagram.com/amineebenmoussa' target='_blank'>
+      <a id='instagram' href='https://www.instagram.com/amineebenmoussa' target='_blank' rel="noopener noreferrer">
         <svg className="w-6 h-6 stroke-1 scale-[0.9] hover:scale-125 transition-transform duration-500"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
