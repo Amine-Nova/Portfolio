@@ -51,7 +51,7 @@ function App() {
               </div>
             </div>
           </section>
-        <section className="w-full flex flex-col items-center relative py-20">
+        <section className="w-full flex flex-col items-center relative py-20 gap-5">
           <div className="dotted absolute inset-0"></div>
           <Projects text="Projects" />
           <Container />
