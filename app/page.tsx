@@ -5,6 +5,8 @@ import ClickSpark from "../components/spark/spark";
 import Text from "../components/HeyText/text";
 import Terminal from "../components/Terminal/terminal";
 import Container from "../components/Containers/container";
+import Focus from "@/components/Focus/focus";
+
 // import LiquidEther from "./components/Backgrounds/rails"
 // With custom prop values
 function App() {
@@ -40,6 +42,7 @@ function App() {
           </div>
           <section className="bg w-full flex flex-col items-center relative pb-14">
             <MainSection />
+            
           </section>
           <section className="flex flex-col items-center w-full relative h-[43em] 2xl:h-[58em] lg:h-[50em] md:h-[50em] sm:h-[46em]">
             <div className="flex flex-col items-center w-full justify-center relative max-w-full">
@@ -56,8 +59,9 @@ function App() {
           <Projects text="Projects" />
           <Container />
         </section>
-         <section className="w-full flex items-center justify-center py-20">
-          <Projects text="Focusing" />
+         <section className="w-full flex flex-col items-center justify-center py-10">
+          <Projects text="Focusing"/>
+          <Focus />
           </section>
         </div>
       </main>

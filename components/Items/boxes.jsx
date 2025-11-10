@@ -213,27 +213,27 @@ const Boxes = ({
 
                   <div ref={containerRef} className="container gap-3">
                     <Image
-                      className="aspect-video h-40 max-w-full rounded-md object-cover inline-block"
+                      className="object-fill aspect-video h-40 max-w-full rounded-md object-cover inline-block"
                       src={carimage[2]}
                       alt=""
                     />
                     <Image
-                      className="aspect-video h-40 rounded-md object-cover inline-block"
+                      className="object-fill aspect-video h-40 max-w-full rounded-md object-cover inline-block"
                       src={carimage[0]}
                       alt=""
                     />
                     <Image
-                      className="aspect-video h-40 rounded-md object-cover inline-block"
+                      className="object-fill aspect-video h-40 max-w-full rounded-md object-cover inline-block"
                       src={carimage[4]}
                       alt=""
                     />
                     <Image
-                      className="aspect-video h-40 rounded-md object-cover inline-block"
+                      className="object-fill aspect-video h-40 max-w-full rounded-md object-cover inline-block"
                       src={carimage[3]}
                       alt=""
                     />
                     <Image
-                      className="aspect-video h-40 rounded-md object-cover inline-block"
+                      className="object-fill aspect-video h-40 max-w-full rounded-md object-cover inline-block"
                       src={carimage[1]}
                       alt=""
                     />
