@@ -57,7 +57,9 @@ body {
   background: linear-gradient(#111928, #1a263b);
 }
 
-
+.icon {
+  color: white;
+}
 .num {
   font-family: "Inter", serif;
   font-optical-sizing: auto;
