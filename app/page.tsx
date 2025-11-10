@@ -143,21 +143,6 @@ function App() {
           <section className="bg w-full flex flex-col items-center relative pb-14">
             <MainSection />
           </section>
-          <section className="w-full flex flex-col items-center relative pb-10 pt-40">
-            <LogoLoop
-              className="icon z-20"
-              logos={techLogos}
-              speed={80}
-              direction="left"
-              logoHeight={70}
-              gap={40}
-              hoverSpeed={0}
-              scaleOnHover
-              fadeOut
-              fadeOutColor="#121a29"
-              ariaLabel="Technology partners"
-            />
-          </section>
           <section className="flex flex-col items-center w-full relative h-[43em] 2xl:h-[58em] lg:h-[50em] md:h-[50em] sm:h-[46em]">
             <div className="flex flex-col items-center w-full justify-center relative max-w-full">
               <Text />
@@ -172,6 +157,21 @@ function App() {
             <div className="dotted absolute inset-0"></div>
             <Projects text="Projects" />
             <Container />
+          </section>
+          <section className="w-full flex flex-col items-center relative py-20">
+            <LogoLoop
+              className="icon z-20"
+              logos={techLogos}
+              speed={80}
+              direction="left"
+              logoHeight={70}
+              gap={40}
+              hoverSpeed={0}
+              scaleOnHover
+              fadeOut
+              fadeOutColor="#121a29"
+              ariaLabel="Technology partners"
+            />
           </section>
           <section className="w-full flex flex-col items-center justify-center py-10">
             <Projects text="Focusing" />
