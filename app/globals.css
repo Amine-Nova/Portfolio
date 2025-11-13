@@ -52,6 +52,11 @@
 }
 
 
+.start {
+  margin-left: -5px;
+  padding-top: 5px;
+}
+
 body {
   background-color: #121a29;
   background: linear-gradient(#111928, #1a263b);

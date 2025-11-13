@@ -157,13 +157,13 @@ const Terminal = () => {
           </span>
         </div>
         {/* Typing starts when this wrapper becomes visible in viewport */}
-        <div ref={typingWrapperRef} className="mt-1 flex flex-col">
+        <div ref={typingWrapperRef} className="mt-1 flex flex-col ">
           <div className="flex items-center">
             <span className="text-green-400">abenmous:~$</span>
             {typingVisible && (
               <Typewriter
                 text="npm install abenmous --save"
-                speed={80}
+                speed={60}
                 pauseDuration={1500}
                 showCursor={true}
                 cursor="|"
@@ -173,11 +173,10 @@ const Terminal = () => {
           </div>
 
           {showSecondLine && (
-            <div className="flex items-start mt-1">
+            <div className="start flex items-center justify-start leading-[1.8rem] pr-10">
               <Typewriter
-                text="hello im amine"
-                speed={75}
-                pauseDuration={0}
+                text="Combining fresh creativity with thoughtful simplicity and tireless effort to build things that last"
+                speed={30}
                 showCursor={false}
               />
             </div>

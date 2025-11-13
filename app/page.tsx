@@ -22,6 +22,7 @@ import {
   SiMysql,
   SiDocker,
 } from "react-icons/si";
+import CardE from "../components/Carousel/CardE";
 
 // import aa from "../assets/abenmous-iconjs.svg"
 
@@ -173,12 +174,13 @@ function App() {
             <Projects text="Projects" />
             <Container />
           </section>
-          <section className="w-full flex flex-col items-center justify-center pt-10">
+          <section className="w-full flex flex-col items-center justify-center py-10">
             <Projects text="Focusing" />
             <Focus />
           </section>
-          <section className="w-full flex flex-col items-center justify-center">
+          <section className="w-full h-[800px] flex flex-col items-center py-10">
             <Projects text="Experience" />
+            <CardE />
           </section>
         </div>
       </main>
