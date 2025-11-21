@@ -141,23 +141,23 @@ const Terminal = () => {
       className="relative pt-[14em] sm:pt-[20em] md:pt-[23em] lg:pt-[27em] z-10 overflow-hidden flex items-center justify-center p-2 cursor-move"
     >
       <div
-        className="w-[370px] h-[200px] sm:w-[500px] sm:h-[230px] md:w-[600px] md:h-[260px]
-            lg:w-[750px] lg:h-[330px] coding inverse-toggle px-5 shadow-lg
+        className="w-[370px] h-full sm:w-[500px] md:w-[600px] 
+            lg:w-[750px] coding inverse-toggle shadow-lg
             text-gray-100 text-sm font-mono subpixel-antialiased 
-            bg-gray-800 pb-6 pt-4 rounded-lg leading-normal overflow-hidden text-xs sm:text-sm lg:text-[16px] px-5"
+            bg-gray-800 rounded-lg leading-normal overflow-hidden text-xs sm:text-sm lg:text-[16px]"
       >
-        <div className="top mb-2 flex justify-start">
+        <div className="top mb-2 flex justify-start w-full bg-white/10 px-5 py-3 ">
           <div className="h-3 w-3 bg-red-500 rounded-full"></div>
           <div className="ml-2 h-3 w-3 bg-orange-300 rounded-full"></div>
           <div className="ml-2 h-3 w-3 bg-green-500 rounded-full"></div>
         </div>
-        <div className="mt-6 text-neutral-500 py-2">
+        <div className="mt-2 text-neutral-500 px-6 pt-5">
           <span>
             Last login: {day} {month} on abm007
           </span>
         </div>
         {/* Typing starts when this wrapper becomes visible in viewport */}
-        <div ref={typingWrapperRef} className="mt-1 flex flex-col ">
+        <div ref={typingWrapperRef} className="mt-1 flex flex-col px-6 mb-6 py-3">
           <div className="flex items-center">
             <span className="text-green-400">abenmous:~$</span>
             {typingVisible && (
@@ -173,10 +173,10 @@ const Terminal = () => {
           </div>
 
           {showSecondLine && (
-            <div className="start flex items-center justify-start leading-[1.8rem] pr-10">
+            <div className="start flex items-center justify-start leading-[1.3rem] md:leading-[1.8rem] pr-10">
               <Typewriter
                 text="Combining fresh creativity with thoughtful simplicity and tireless effort to build things that last"
-                speed={30}
+                speed={10}
                 showCursor={false}
               />
             </div>

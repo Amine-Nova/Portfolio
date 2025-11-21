@@ -86,6 +86,10 @@ body {
   font-weight: 300;
 }
 
+.menlo {
+  font-family: "Menlo", monospace;
+}
+
 .hover-diagonal {
   display: inline-block;
   transition: transform 0.3s ease;
@@ -183,6 +187,11 @@ body {
 
 
 /* From Uiverse.io by Praashoo7 */ 
+
+.w {
+  width: 0% !important;
+}
+
 .flip-card {
   background-color: transparent;
   width: 240px;

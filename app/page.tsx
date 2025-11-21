@@ -156,7 +156,7 @@ function App() {
             <Projects text="Focusing" />
             <Focus />
           </section>
-          <section className="w-full h-[800px] flex flex-col items-center py-10">
+          <section className="w-full h-[8000px] flex flex-col items-center py-10">
             <Projects text="Experience" />
             <CardE />
           </section>
