@@ -90,6 +90,11 @@ body {
   font-family: "Menlo", monospace;
 }
 
+.menlo5 {
+  font-family: "Menlo", monospace;
+  font-weight: 500;
+}
+
 .hover-diagonal {
   display: inline-block;
   transition: transform 0.3s ease;
@@ -335,4 +340,169 @@ body {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
   background-color: #171717;
   transform: rotateY(180deg);
+}
+
+.bgcard{
+  width: 100%;
+  height: 100%;
+  --s: 200px; /* control the size */
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
+}
+
+
+/* From Uiverse.io by PriyanshuGupta28 */ 
+.bgxp {
+  width: 100%;
+  height: 100%;
+  /* Add your background pattern here */
+  --s: 25vmin;
+  --p: calc(var(--s) / 2);
+  --c1: rgb(103, 51, 187);
+  --c2: rgb(0, 0, 0);
+  --c3: white;
+  --bg: var(--c3);
+  --d: 4000ms;
+  --e: cubic-bezier(0.76, 0, 0.24, 1);
+
+  background-color: var(--bg);
+  background-image: linear-gradient(45deg, var(--c1) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--c1) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--c2) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--c2) 75%);
+  background-size: var(--s) var(--s);
+  background-position:
+    calc(var(--p) * 1) calc(var(--p) * 0),
+    calc(var(--p) * -1) calc(var(--p) * 1),
+    calc(var(--p) * 1) calc(var(--p) * -1),
+    calc(var(--p) * -1) calc(var(--p) * 0);
+}
+
+@keyframes color {
+  0%,
+  25% {
+    --bg: var(--c3);
+  }
+  26%,
+  50% {
+    --bg: var(--c1);
+  }
+  51%,
+  75% {
+    --bg: var(--c3);
+  }
+  76%,
+  100% {
+    --bg: var(--c2);
+  }
+}
+
+@keyframes position {
+  0% {
+    background-position:
+      calc(var(--p) * 1) calc(var(--p) * 0),
+      calc(var(--p) * -1) calc(var(--p) * 1),
+      calc(var(--p) * 1) calc(var(--p) * -1),
+      calc(var(--p) * -1) calc(var(--p) * 0);
+  }
+  25% {
+    background-position:
+      calc(var(--p) * 1) calc(var(--p) * 4),
+      calc(var(--p) * -1) calc(var(--p) * 5),
+      calc(var(--p) * 1) calc(var(--p) * 3),
+      calc(var(--p) * -1) calc(var(--p) * 4);
+  }
+  50% {
+    background-position:
+      calc(var(--p) * 3) calc(var(--p) * 8),
+      calc(var(--p) * -3) calc(var(--p) * 9),
+      calc(var(--p) * 2) calc(var(--p) * 7),
+      calc(var(--p) * -2) calc(var(--p) * 8);
+  }
+  75% {
+    background-position:
+      calc(var(--p) * 3) calc(var(--p) * 12),
+      calc(var(--p) * -3) calc(var(--p) * 13),
+      calc(var(--p) * 2) calc(var(--p) * 11),
+      calc(var(--p) * -2) calc(var(--p) * 12);
+  }
+  100% {
+    background-position:
+      calc(var(--p) * 5) calc(var(--p) * 16),
+      calc(var(--p) * -5) calc(var(--p) * 17),
+      calc(var(--p) * 5) calc(var(--p) * 15),
+      calc(var(--p) * -5) calc(var(--p) * 16);
+  }
+}
+
+
+.bg4 {
+  width: 100%;
+  height: 100%;
+  --s: 190px;
+  --c1: #04211f;
+  --c2: #158482;
+  --c3: #0f342b;
+
+  background:
+    repeating-conic-gradient(
+        from 30deg,
+        #0000 90deg 120deg,
+        var(--c3) 0deg 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0deg 60deg,
+      var(--c2) 0deg 120deg,
+      var(--c3) 0deg 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
+}
+
+.bg3 {
+  width: 100%;
+  height: 100%;
+  --s: 200px;
+  --c1: #070c1c97;
+  --c2: #213189;
+  --c3: #0e1c4a;
+
+  background:
+    repeating-conic-gradient(
+        from 30deg,
+        #d7202000 90deg 120deg,
+        var(--c3) 0deg 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0deg 60deg,
+      var(--c2) 0deg 120deg,
+      var(--c3) 0deg 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
+}
+
+.bg2 {
+  background-color: #0e1c4a;
+}
+
+.bg1 {
+  background-color: #0f342b; 
 }

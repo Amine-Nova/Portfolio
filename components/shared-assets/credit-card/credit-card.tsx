@@ -3,6 +3,9 @@
 import { useMemo, useState } from "react";
 import { cx, sortCx } from "@/utils/cx";
 import { MastercardIcon, MastercardIconWhite, PaypassIcon } from "./icons";
+import Image from "next/image";
+import chip from "../../../assets/abenmous12.svg";
+
 
 const styles = sortCx({
   // Normal
@@ -136,7 +139,6 @@ type CreditCardType =
   | (typeof VERTICAL_STRIP_TYPES)[number];
 
 interface CreditCardProps {
-  company?: string;
   cardNumber?: string;
   cardHolder?: string;
   cardExpiration?: string;
@@ -146,6 +148,13 @@ interface CreditCardProps {
   /** Provide custom JSX for the back face */
   backContent?: React.ReactNode;
   s?: string;
+  bg: string;
+  bg2?: string;
+  timeline?: string;
+  position?: string;
+  company?: string;
+  /** Interaction mode: hover (default) or click; click is useful for touch devices */
+  interactionMode?: 'hover' | 'click';
 }
 
 const calculateScale = (
@@ -168,10 +177,15 @@ const calculateScale = (
 };
 
 export const CreditCard = ({
-s,
+  s,
+  bg,
+  bg2,
   type = "brand-dark",
   className,
   width,
+  timeline,
+  position,
+  company
 }: CreditCardProps) => {
   const originalWidth = 316;
   const originalHeight = 190;
@@ -195,8 +209,9 @@ s,
         height: `${scaledHeight}px`,
         perspective: "1000px",
       }}
-      className={cx("relative flex items-center justify-center", className)}
-      onClick={() => setFlipped((f) => !f)}
+      className={cx("group relative flex items-center justify-center z-40 cursor-pointer", className)}
+      onMouseEnter={() => setFlipped(true)}
+      onMouseLeave={() => setFlipped(false)}
     >
       <div
         style={{
@@ -206,6 +221,7 @@ s,
           transform: `scale(${scale}) rotateY(${flipped ? 180 : 0}deg)`,
           transformOrigin: "center",
           transition: "transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1)",
+          willChange: "transform",
         }}
       >
         {/* Front */}
@@ -213,7 +229,8 @@ s,
           style={{ backfaceVisibility: "hidden" }}
           className={cx(
             "absolute inset-0 flex origin-center flex-col justify-between overflow-hidden rounded-2xl p-4",
-            styles[type].root
+            styles[type].root,
+            bg
           )}
         >
           {/* Horizontal strip */}
@@ -238,217 +255,31 @@ s,
 
           <div className="relative flex items-start justify-between px-1 pt-1">
             <div>
-              <svg
-                width="40"
-                height="30"
-                viewBox="0 0 40 30"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  width="40"
-                  height="30"
-                  rx="4"
-                  fill="url(#paint0_linear_23_52)"
-                />
-                <rect
-                  x="1.5"
-                  y="1.5"
-                  width="37"
-                  height="27"
-                  rx="3.5"
-                  stroke="black"
-                  stroke-opacity="0.13"
-                />
-                <rect
-                  x="15.05"
-                  y="11.05"
-                  width="9.9"
-                  height="7.9"
-                  stroke="black"
-                  stroke-width="0.1"
-                />
-                <path d="M25 14.95L32 15" stroke="black" stroke-width="0.1" />
-                <line
-                  x1="19.95"
-                  y1="11"
-                  x2="19.95"
-                  y2="2"
-                  stroke="black"
-                  stroke-width="0.1"
-                />
-                <line
-                  x1="19.95"
-                  y1="28"
-                  x2="19.95"
-                  y2="19"
-                  stroke="black"
-                  stroke-width="0.1"
-                />
-                <line
-                  x1="26.9646"
-                  y1="11.9646"
-                  x2="31.9646"
-                  y2="6.96464"
-                  stroke="black"
-                  stroke-width="0.1"
-                />
-                <line
-                  x1="27.0354"
-                  y1="17.9646"
-                  x2="32.0354"
-                  y2="22.9646"
-                  stroke="black"
-                  stroke-width="0.1"
-                />
-                <line
-                  x1="25"
-                  y1="11.95"
-                  x2="27"
-                  y2="11.95"
-                  stroke="black"
-                  stroke-width="0.1"
-                />
-                <line
-                  x1="13"
-                  y1="11.95"
-                  x2="15"
-                  y2="11.95"
-                  stroke="black"
-                  stroke-width="0.1"
-                />
-                <line
-                  x1="25"
-                  y1="17.95"
-                  x2="27"
-                  y2="17.95"
-                  stroke="black"
-                  stroke-width="0.1"
-                />
-                <line
-                  x1="13"
-                  y1="17.95"
-                  x2="15"
-                  y2="17.95"
-                  stroke="black"
-                  stroke-width="0.1"
-                />
-                <line
-                  x1="32"
-                  y1="6.95"
-                  x2="38"
-                  y2="6.95"
-                  stroke="black"
-                  stroke-width="0.1"
-                />
-                <line
-                  x1="2"
-                  y1="22.95"
-                  x2="8"
-                  y2="22.95"
-                  stroke="black"
-                  stroke-width="0.1"
-                />
-                <line
-                  x1="2"
-                  y1="6.95"
-                  x2="8"
-                  y2="6.95"
-                  stroke="black"
-                  stroke-width="0.1"
-                />
-                <line
-                  x1="32"
-                  y1="22.95"
-                  x2="38"
-                  y2="22.95"
-                  stroke="black"
-                  stroke-width="0.1"
-                />
-                <line
-                  x1="8"
-                  y1="14.95"
-                  x2="15"
-                  y2="14.95"
-                  stroke="black"
-                  stroke-width="0.1"
-                />
-                <path
-                  d="M31.9878 6.93488C31.9921 6.93632 32.0185 6.94072 32.0273 6.94508C32.0545 6.95855 31.9791 6.97729 31.9681 6.97734C31.9658 6.97448 31.9702 6.96579 31.9753 6.95769C31.9804 6.94959 31.9862 6.94234 32.0054 6.93048"
-                  stroke="black"
-                  stroke-width="0.08"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M31.9439 6.95244C31.9425 6.95244 31.941 6.95244 31.9446 6.95099C31.9482 6.94954 31.9569 6.94664 31.979 6.93048"
-                  stroke="black"
-                  stroke-width="0.08"
-                  stroke-linecap="round"
-                />
-                <line
-                  x1="12.9646"
-                  y1="12.0354"
-                  x2="7.96464"
-                  y2="7.03536"
-                  stroke="black"
-                  stroke-width="0.1"
-                />
-                <line
-                  x1="13.0354"
-                  y1="18.0354"
-                  x2="8.03536"
-                  y2="23.0354"
-                  stroke="black"
-                  stroke-width="0.1"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_23_52"
-                    x1="20"
-                    y1="0"
-                    x2="20"
-                    y2="30"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#E4A700" />
-                    <stop
-                      offset="0.501676"
-                      stop-color="white"
-                      stop-opacity="0.85"
-                    />
-                    <stop offset="0.9999" stop-color="#E4A700" />
-                  </linearGradient>
-                </defs>
-              </svg>
+              <Image src={chip} alt="Card Image" width={35} height={20} />
             </div>
-
             <PaypassIcon className={styles[type].paypassIcon} />
           </div>
-
-          <div className="flex justify-between">
+        <div className="menlo5 uppercase flex flex-col px-1 items-center align-center w-full">
+          <p className="text-white text-[23px] text-center">{position}</p>
+          </div>
+          <div className="flex justify-between w-full">
            
-              <div className="flex flex-col">
-                <p className="menlo text-zinc-500 opacity-75 text-[10px] tracking-tighter">
+              <div className="flex flex-col w-1/2 h-full gap-[0.5px]">
+                <p className="menlo text-zinc-200 opacity-75 text-[10px] tracking-tighter">
                 {s}
                 </p>
-                <p className="menlo text-blue-200 uppercase text-[13px] flex align-right pl-[2px]">
-                    mbo
+                <p className="menlo text-white text-[12px] flex align-right pl-[2px]">
+                   {company}
                 </p>
               </div>
-            <div
-              className={cx(
-                "flex h-8 w-12 shrink-0 items-center justify-center rounded",
-                styles[type].cardTypeRoot
-              )}
-            >
-              {CARD_WITH_COLOR_LOGO.includes(
-                type as (typeof CARD_WITH_COLOR_LOGO)[number]
-              ) ? (
-                <MastercardIcon />
-              ) : (
-                <MastercardIconWhite />
-              )}
-            </div>
+            <div className="flex flex-col w-[35%] h-full gap-[2px]">
+                <p className="menlo text-zinc-200 opacity-75 text-[10px] tracking-tighter pr-2">
+                  Timeline
+                </p>
+                <p className="menlo text-white font-bold uppercase text-[11px] font-light tracking-tighter flex items-end align-end">
+                    {timeline}
+                </p>
+              </div>
           </div>
         </div>
 
@@ -456,11 +287,14 @@ s,
         <div
           style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
           className={cx(
-            "absolute inset-0 flex origin-center flex-col overflow-hidden rounded-2xl p-4 bg-[#19253a]",
+            "absolute inset-0 flex origin-center flex-col overflow-hidden rounded-2xl p-4",
+            bg2,
             styles[type].root
           )}
         >
-          <div></div>
+          <div className="flex flex-col justify-center items-start w-full px-3 h-full">
+            <li className="justtxt font-semibold text-[12px] text-zinc-200">helo</li>
+          </div>
         </div>
       </div>
     </div>

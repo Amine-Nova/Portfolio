@@ -1,0 +1,30 @@
+<svg width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="30" height="23" rx="4" fill="url(#paint0_linear_23_52)"/>
+<rect x="1.25" y="1.26667" width="27.5" height="20.4667" rx="3.5" stroke="black" stroke-opacity="0.13"/>
+<rect x="11.3" y="8.48333" width="7.4" height="6.03333" stroke="black" stroke-width="0.1"/>
+<path d="M18.75 11.4617L24 11.5" stroke="black" stroke-width="0.1"/>
+<line x1="14.95" y1="8.43333" x2="14.95" y2="1.53333" stroke="black" stroke-width="0.1"/>
+<line x1="14.95" y1="21.4667" x2="14.95" y2="14.5667" stroke="black" stroke-width="0.1"/>
+<line y1="-0.05" x2="5.36255" y2="-0.05" transform="matrix(0.699294 -0.714834 0.699294 0.714834 20.25 9.2)" stroke="black" stroke-width="0.1"/>
+<line y1="-0.05" x2="5.36255" y2="-0.05" transform="matrix(0.699294 0.714834 -0.699294 0.714834 20.25 13.8)" stroke="black" stroke-width="0.1"/>
+<line x1="18.75" y1="9.15" x2="20.25" y2="9.15" stroke="black" stroke-width="0.1"/>
+<line x1="9.75" y1="9.15" x2="11.25" y2="9.15" stroke="black" stroke-width="0.1"/>
+<line x1="18.75" y1="13.75" x2="20.25" y2="13.75" stroke="black" stroke-width="0.1"/>
+<line x1="9.75" y1="13.75" x2="11.25" y2="13.75" stroke="black" stroke-width="0.1"/>
+<line x1="24" y1="5.31667" x2="28.5" y2="5.31667" stroke="black" stroke-width="0.1"/>
+<line x1="1.5" y1="17.5833" x2="6" y2="17.5833" stroke="black" stroke-width="0.1"/>
+<line x1="1.5" y1="5.31667" x2="6" y2="5.31667" stroke="black" stroke-width="0.1"/>
+<line x1="24" y1="17.5833" x2="28.5" y2="17.5833" stroke="black" stroke-width="0.1"/>
+<line x1="6" y1="11.45" x2="11.25" y2="11.45" stroke="black" stroke-width="0.1"/>
+<path d="M23.9909 5.31674C23.9941 5.31785 24.0138 5.32121 24.0205 5.32456C24.0409 5.33489 23.9843 5.34926 23.9761 5.34929C23.9744 5.3471 23.9776 5.34044 23.9815 5.33422C23.9853 5.32801 23.9897 5.32246 24.004 5.31337" stroke="black" stroke-width="0.08" stroke-linecap="round"/>
+<path d="M23.9579 5.33093C23.9568 5.33093 23.9557 5.33093 23.9584 5.32977C23.9611 5.32861 23.9677 5.3263 23.9843 5.31337" stroke="black" stroke-width="0.08" stroke-linecap="round"/>
+<line y1="-0.05" x2="5.36255" y2="-0.05" transform="matrix(-0.699294 -0.714834 0.699294 -0.714834 9.75 9.2)" stroke="black" stroke-width="0.1"/>
+<line y1="-0.05" x2="5.36255" y2="-0.05" transform="matrix(-0.699294 0.714834 -0.699294 -0.714834 9.75 13.8)" stroke="black" stroke-width="0.1"/>
+<defs>
+<linearGradient id="paint0_linear_23_52" x1="15" y1="0" x2="15" y2="23" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E4A700"/>
+<stop offset="0.501676" stop-color="white" stop-opacity="0.85"/>
+<stop offset="0.9999" stop-color="#E4A700"/>
+</linearGradient>
+</defs>
+</svg>

@@ -147,18 +147,20 @@ function App() {
               </div>
             </div>
           </section>
-          <section className="w-full flex flex-col items-center relative py-20 gap-5">
+          <section className="w-full h-full flex flex-col items-center relative py-10 gap-5">
             <div className="dotted absolute inset-0"></div>
             <Projects text="Projects" />
             <Container />
           </section>
-          <section className="w-full flex flex-col items-center justify-center py-10">
+          <section className="w-full h-full flex flex-col items-center justify-center py-10">
             <Projects text="Focusing" />
             <Focus />
           </section>
-          <section className="w-full h-[8000px] flex flex-col items-center py-10">
+          <section className="w-full h-full flex flex-col items-center py-20 ">
             <Projects text="Experience" />
             <CardE />
+          </section>
+          <section className="w-full h-[800px] flex flex-col items-center py-20 border-t border-gray-700">
           </section>
         </div>
       </main>

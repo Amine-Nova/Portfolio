@@ -3,20 +3,20 @@ import React from "react";
 // <style></style>
 const Focus = () => {
   return (
-    <section className="fx-grid min-h-[80vh] flex flex-col sm:w-11/12 w-full xl:w-[90%] mx-auto mt-20 px-16 sm:px-5 xl:px-24 gap-4 z-20">
+    <section className="fx-grid h-full flex flex-col sm:w-11/12 w-full xl:w-[90%] mx-auto mt-20 px-16 sm:px-5 xl:px-24 gap-4 z-20">
       {/* local styles for sheen/tilt/glow + content slide/underline */}
       <style jsx global>{`
         .st {
-          stroke-width:10;
+          strokeWidth:10;
         }
         .a
         {
-          fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;
-          stroke-width:2;
+          fill:none;stroke:#000000;strokeLinecap:round;stroke-linejoin:round;
+          strokeWidth:2;
         }
         .b {
-        fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;
-          stroke-width:1.2;
+        fill:none;stroke:#000000;strokeLinecap:round;stroke-linejoin:round;
+          strokeWidth:1.2;
           }
         .fx-grid {
           perspective: 1200px;
