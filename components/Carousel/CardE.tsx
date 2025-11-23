@@ -13,15 +13,21 @@ import { CreditCard } from '@/components/shared-assets/credit-card/credit-card';
 
 const CardE = () => {
 
-  const [wi, setWi] = useState(500);
-  
-  useEffect(() => {
-    const updateWidth = () => {
-      setWi(window.innerWidth < 1101 ? 400 : 500);
+    const getWi = () => {
+      if (typeof window === "undefined") return 500;
+      if (window.innerWidth < 768) return 350;
+      if (window.innerWidth < 1101) return 400;
+      return 500;
     };
 
-    window.addEventListener("resize", updateWidth);
-  }, []);
+    const [wi, setWi] = useState(getWi());
+
+    useEffect(() => {
+      const updateWidth = () => {
+        setWi(getWi());
+      };
+      window.addEventListener("resize", updateWidth);
+    }, []);
 
   return (
     <div className="flex flex-col gap-24 lg:flex-row lg:gap-0 justify-evenly items-center z-40 inset-0 w-full h-auto py-32">
