@@ -39,11 +39,11 @@ const Typewriter = ({ text = "", speed = 80, pauseDuration = 1500, showCursor = 
 
 const Terminal = () => {
   const breakpoints = [
-    { minWidth: 1536, top: -50, bottom: 250 },
-    { minWidth: 1025, top: -80, bottom: 140 },
+    { minWidth: 1536, top: -120, bottom: 160 },
+    { minWidth: 1025, top: -120, bottom: 110 },
     { minWidth: 808, top: -80, bottom: 200 },
     { minWidth: 769, top: -80, bottom: 170 },
-    { minWidth: 641, top: -20, bottom: 210 },
+    { minWidth: 641, top: -100, bottom: 130 },
     { minWidth: 553, top: -28, bottom: 140 },
     { minWidth: 0, top: -28, bottom: 100 },
   ];
@@ -173,7 +173,7 @@ const Terminal = () => {
           </div>
 
           {showSecondLine && (
-            <div className="start flex items-center justify-start leading-[1.3rem] md:leading-[1.8rem] pr-10">
+            <div className="start flex items-center justify-start leading-[1.3rem] md:leading-[1.8rem] pr-2">
               <Typewriter
                 text="Combining fresh creativity with thoughtful simplicity and tireless effort to build things that last"
                 speed={10}

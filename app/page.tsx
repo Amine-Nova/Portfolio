@@ -6,86 +6,14 @@ import Text from "../components/HeyText/text";
 import Terminal from "../components/Terminal/terminal";
 import Container from "../components/Containers/container";
 import Focus from "@/components/Focus/focus";
-import LogoLoop from "../components/LogoLoop/LogoLoop";
-import { GridScan } from "../components/Backgrounds/grid";
-import Galaxy from "../components/Backgrounds/rails";
+import SocialEnd from "../components/social/socialEnd";
+import ContinuousMarquee from "../components/ContinuousMarquee";
+import Logo from "../components/Content/logoLoop";
 
-import {
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
-  SiTailwindcss,
-  SiJavascript,
-  SiCplusplus,
-  SiWordpress,
-  SiDjango,
-  SiPython,
-  SiGithub,
-  SiPostgresql,
-  SiMysql,
-  SiDocker,
-} from "react-icons/si";
+
 import CardE from "../components/Carousel/CardE";
 
-const techLogos = [
-  { node: <SiReact />, title: "React", href: "https://react.dev" },
-  { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
-  {
-    node: <SiTypescript />,
-    title: "TypeScript",
-    href: "https://www.typescriptlang.org",
-  },
-  {
-    node: <SiTailwindcss />,
-    title: "Tailwind CSS",
-    href: "https://tailwindcss.com",
-  },
-  {
-    node: <SiJavascript />,
-    title: "JavaScript",
-    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-  },
-  {
-    node: <SiCplusplus />,
-    title: "C++",
-    href: "https://isocpp.org",
-  },
-  {
-    node: <SiWordpress />,
-    title: "WordPress",
-    href: "https://wordpress.org",
-  },
-  {
-    node: <SiDjango />,
-    title: "Django",
-    href: "https://www.djangoproject.com",
-  },
-  {
-    node: <SiPython />,
-    title: "Python",
-    href: "https://www.python.org",
-  },
-  {
-    node: <SiGithub />,
-    title: "GitHub",
-    href: "https://github.com",
-  },
-  {
-    node: <SiPostgresql />,
-    title: "PostgreSQL",
-    href: "https://www.postgresql.org",
-  },
-  {
-    node: <SiMysql />,
-    title: "MySQL",
-    href: "https://www.mysql.com",
-  },
-  {
-    node: <SiDocker />,
-    title: "Docker",
-    href: "https://www.docker.com",
-  },
-];
+
 
 // Alternative with image sources
 const imageLogos = [
@@ -122,21 +50,7 @@ function App() {
           <section className="bg w-full flex flex-col items-center pb-14">
             <MainSection />
           </section>
-          <section className="w-full flex flex-col items-center relative py-20">
-            <LogoLoop
-              className="icon z-20"
-              logos={techLogos}
-              speed={80}
-              direction="left"
-              logoHeight={70}
-              gap={40}
-              hoverSpeed={0}
-              scaleOnHover
-              fadeOut
-              fadeOutColor="#121a29"
-              ariaLabel="Technology partners"
-            />
-          </section>
+          <Logo />
           <section className="flex flex-col items-center w-full relative h-[43em] 2xl:h-[58em] lg:h-[50em] md:h-[50em] sm:h-[46em]">
             <div className="flex flex-col items-center w-full justify-center relative max-w-full">
               <Text />
@@ -160,7 +74,24 @@ function App() {
             <Projects text="Experience" />
             <CardE />
           </section>
-          <section className="w-full h-[800px] flex flex-col items-center py-20 border-t border-gray-700">
+          <section className="w-full flex flex-col items-center py-20 border-t border-gray-700">
+            <SocialEnd />
+          </section>
+          <section className="relative w-full overflow-hidden pb-28 ">
+            <ContinuousMarquee
+              text="Stay Tuned For More Projects & Updates !!! | "
+              repeat={24}
+              speed={25}
+              className="font-display text-3xl font-bold tracking-[-0.02em] text-blue-200 drop-shadow-xs pb-3"
+              direction="left"
+            />
+             <ContinuousMarquee
+              text="Made By Amine Ben Moussa |"
+              repeat={24}
+              speed={25}
+              className="font-display text-3xl font-bold tracking-[-0.02em] text-blue-400 drop-shadow-xs"
+              direction="right"
+            />
           </section>
         </div>
       </main>

@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "components/Focus/focus.jsx"  ],
+, "components/Focus/focus.jsx", "components/Marquee.jsx"  ],
   "exclude": ["node_modules"]
 }

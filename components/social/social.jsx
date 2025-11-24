@@ -4,7 +4,7 @@ const social = () => {
   return (
     <div className='flex gap-8 z-10'>
       <a id='github' href='https://github.com/Amine-Nova' target='_blank' rel="noopener noreferrer">
-        <svg className="hover:fill-zinc-800 w-6 h-6 stroke-1 scale-[0.9] hover:scale-125 transition-transform duration-500"
+        <svg className="hover:fill-white w-6 h-6 stroke-1 scale-[0.9] hover:scale-125 transition-transform duration-500"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
         >
@@ -52,8 +52,8 @@ const social = () => {
           />
         </svg>
       </a>
-      <a id='instagram' href='https://www.instagram.com/amineebenmoussa' target='_blank' rel="noopener noreferrer">
-        <svg className="w-6 h-6 stroke-1 scale-[0.9] hover:scale-125 transition-transform duration-500"
+      <a id='instagram' href='https://www.instagram.com/aminebenm_' target='_blank' rel="noopener noreferrer">
+        <svg className="w-6 h-6 stroke-1 scale-[0.9] hover:scale-125 hover:fill-pink-800 transition-transform duration-500"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
         >
@@ -73,6 +73,21 @@ const social = () => {
           </defs>
         </svg>
       </a>
+      <a href="https://wa.me/+212681212573" target='_blank' rel="noopener noreferrer">
+          <svg
+          className="w-6 h-6 stroke-1 scale-[1.1] hover:scale-[1.5] hover:fill-green-400 transition-transform duration-500 stroke-white"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
+            <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"></path>
+          </svg>
+        </a>
     </div>
   )
 }
