@@ -296,7 +296,7 @@ export const CreditCard = ({
             styles[type].root
           )}
         >
-          <div className="flex flex-col justify-center items-start w-[100%] px-3 h-full gap-1/2">
+          <div className="flex flex-col justify-center items-start w-[100%] h-full gap-1/2">
             {backList && backList.map((item, index) => (
               <li key={index} className="break justtxt text-[9px] text-zinc-200">{item}</li>
             ))}

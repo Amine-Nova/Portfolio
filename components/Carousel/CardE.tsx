@@ -29,13 +29,6 @@ const CardE = () => {
 
   return (
     <div className="flex flex-col gap-24 lg:flex-row lg:gap-0 justify-evenly items-center z-40 inset-0 w-full h-auto py-32">
-      {/* <Swiper
-        slidesPerView={1} 
-        spaceBetween={0}
-        className="mySwiper"
-        style={{ width: "100%"}}
-      >
-        <SwiperSlide className=" z-40 py-5"> */}
       <div className="z-40 flex items-center justify-center">
         <CreditCard
           bg="bg3"
@@ -56,8 +49,6 @@ const CardE = () => {
           technologies="React, JavaScript, HTML, CSS, Django, Python, PostgreSQL, WordPress, VPS, Hosting."
         />
       </div>
-      {/* </SwiperSlide>
-         <SwiperSlide className="z-40 py-5"> */}
       <div className="z-40 flex items-center justify-center">
         <CreditCard
           bg="bg4"
@@ -72,8 +63,6 @@ const CardE = () => {
           technologies="C, Algorithms, Data Structures, Memory Management, Debugging, Shell, Pipelines, Minishell"
         />
       </div>
-      {/* </SwiperSlide>
-      </Swiper> */}
     </div>
   );
 };
