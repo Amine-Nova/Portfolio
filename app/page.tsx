@@ -9,7 +9,7 @@ import Focus from "@/components/Focus/focus";
 import SocialEnd from "../components/social/socialEnd";
 import ContinuousMarquee from "../components/ContinuousMarquee";
 import Logo from "../components/Content/logoLoop";
-
+import LiquidEther from "../components/LiquidEther"
 
 import CardE from "../components/Carousel/CardE";
 
@@ -47,6 +47,25 @@ function App() {
     >
       <main className="w-full flex flex-col items-center max-w-full overflow-hidden">
         <div className="relative w-full">
+          <div style={{ position: "fixed" }} className="w-full h-full overflow-hidden">
+            <LiquidEther
+              colors={["#2e2946", "#16141e", "#3c3464"]}
+              mouseForce={20}
+              cursorSize={80}
+              isViscous={false}
+              viscous={30}
+              iterationsViscous={32}
+              iterationsPoisson={32}
+              resolution={0.5}
+              isBounce={false}
+              autoDemo={true}
+              autoSpeed={0.5}
+              autoIntensity={2.2}
+              takeoverDuration={0.25}
+              autoResumeDelay={3000}
+              autoRampDuration={0.6}
+            />
+          </div>
           <section className="bg w-full flex flex-col items-center pb-14">
             <MainSection />
           </section>
