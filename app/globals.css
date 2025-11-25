@@ -596,3 +596,8 @@ body {
 .animate-marquee-left {
   animation: marquee-left 20s linear infinite;
 }
+
+.break {
+  word-break: normal;
+  overflow-wrap: anywhere;
+}

@@ -144,6 +144,7 @@ interface CreditCardProps {
   cardExpiration?: string;
   type?: CreditCardType;
   className?: string;
+  backList?: string[];
   width?: number;
   /** Provide custom JSX for the back face */
   backContent?: React.ReactNode;
@@ -153,6 +154,7 @@ interface CreditCardProps {
   timeline?: string;
   position?: string;
   company?: string;
+  technologies?: string;
   /** Interaction mode: hover (default) or click; click is useful for touch devices */
   interactionMode?: 'hover' | 'click';
 }
@@ -185,7 +187,9 @@ export const CreditCard = ({
   width,
   timeline,
   position,
-  company
+  company,
+  backList,
+  technologies
 }: CreditCardProps) => {
   const originalWidth = 316;
   const originalHeight = 190;
@@ -292,8 +296,11 @@ export const CreditCard = ({
             styles[type].root
           )}
         >
-          <div className="flex flex-col justify-center items-start w-full px-3 h-full">
-            <li className="justtxt font-semibold text-[12px] text-zinc-200">helo</li>
+          <div className="flex flex-col justify-center items-start w-[100%] px-3 h-full gap-1/2">
+            {backList && backList.map((item, index) => (
+              <li key={index} className="break justtxt text-[9px] text-zinc-200">{item}</li>
+            ))}
+            <p className="text-[9px] text-blue-500 underline pt-1">Technologies : {technologies}</p>
           </div>
         </div>
       </div>

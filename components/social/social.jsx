@@ -1,10 +1,16 @@
-import React from 'react'
+import React from "react";
 
 const social = () => {
   return (
-    <div className='flex gap-8 z-10'>
-      <a id='github' href='https://github.com/Amine-Nova' target='_blank' rel="noopener noreferrer">
-        <svg className="hover:fill-white w-6 h-6 stroke-1 scale-[0.9] hover:scale-125 transition-transform duration-500"
+    <div className="flex gap-8 z-10">
+      <a
+        id="github"
+        href="https://github.com/Amine-Nova"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg
+          className="hover:fill-white w-6 h-6 stroke-1 scale-[0.9] hover:scale-125 transition-transform duration-500"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
         >
@@ -24,8 +30,14 @@ const social = () => {
           </defs>
         </svg>
       </a>
-      <a id='facebook' href='https://www.facebook.com/amine.bm.7393' target='_blank' rel="noopener noreferrer">
-        <svg className="hover:fill-blue-500 w-6 h-6 stroke-1 scale-[0.9] hover:scale-125 transition-transform duration-500"
+      <a
+        id="facebook"
+        href="https://www.facebook.com/amine.bm.7393"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg
+          className="hover:fill-blue-500 w-6 h-6 stroke-1 scale-[0.9] hover:scale-125 transition-transform duration-500"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
         >
@@ -38,8 +50,14 @@ const social = () => {
           />
         </svg>
       </a>
-      <a id='linkedin' href='https://www.linkedin.com/in/amine-ben-moussa-3667442a0/' target='_blank' rel="noopener noreferrer">
-        <svg className="hover:fill-blue-900 w-6 h-6 stroke-1 scale-[0.9] hover:scale-125 transition-transform duration-500"
+      <a
+        id="linkedin"
+        href="https://www.linkedin.com/in/amine-ben-moussa-3667442a0/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg
+          className="hover:fill-blue-900 w-6 h-6 stroke-1 scale-[0.9] hover:scale-125 transition-transform duration-500"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
         >
@@ -52,44 +70,46 @@ const social = () => {
           />
         </svg>
       </a>
-      <a id='instagram' href='https://www.instagram.com/aminebenm_' target='_blank' rel="noopener noreferrer">
-        <svg className="w-6 h-6 stroke-1 scale-[0.9] hover:scale-125 hover:fill-pink-800 transition-transform duration-500"
+      <a
+        id="mail"
+        href="mailto:bmamine52@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg
+          className="hover:fill-yellow-500 w-7 h-7 hover:scale-125 transition-transform duration-500"
+          viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
+          stroke="#ffffffff"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
-          <g clipPath="url(#a)">
-            <path
-              stroke="#fff"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1}
-              d="M18.23 6.77h.01M7.292 2.084h10.416a5.208 5.208 0 0 1 5.209 5.209v10.416a5.208 5.208 0 0 1-5.209 5.209H7.292a5.208 5.208 0 0 1-5.209-5.209V7.292a5.208 5.208 0 0 1 5.209-5.209Zm9.375 9.76a4.167 4.167 0 1 1-8.244 1.223 4.167 4.167 0 0 1 8.244-1.222Z"
-            />
-          </g>
-          <defs>
-            <clipPath id="a">
-              <path fill="#fff" d="M0 0h25v25H0z" />
-            </clipPath>
-          </defs>
+          <path d="M6.47,10.71a2,2,0,0,0-2,2V35.32a2,2,0,0,0,2,2H41.53a2,2,0,0,0,2-2V12.68a2,2,0,0,0-2-2H6.47Zm33.21,3.82L24,26.07,8.32,14.53" />
         </svg>
       </a>
-      <a href="https://wa.me/+212681212573" target='_blank' rel="noopener noreferrer">
-          <svg
+      <a
+        href="https://wa.me/+212681212573"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg
           className="w-6 h-6 stroke-1 scale-[1.1] hover:scale-[1.5] hover:fill-green-400 transition-transform duration-500 stroke-white"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
-            <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"></path>
-          </svg>
-        </a>
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
+          <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"></path>
+        </svg>
+      </a>
     </div>
-  )
-}
+  );
+};
 
-export default social
+export default social;

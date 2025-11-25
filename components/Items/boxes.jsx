@@ -185,7 +185,6 @@ const Boxes = ({
             </div>
             <div className="px-6 py-4 flex flex-col gap-3">
               <div className="flex gap-5">
-                {/* <img className="w-20 h-20 rounded-sm" src={src} /> */}
                 <Image className="w-20 h-20 rounded-sm" src={src} alt="icon" />
                 <div className="flex flex-col gap-1 justify-center">
                   <p className="justtxt text-xl font-semibold">{header}</p>
@@ -210,33 +209,14 @@ const Boxes = ({
                   >
                     ›
                   </button>
-
                   <div ref={containerRef} className="container gap-3">
-                    <Image
+                  {carimage.map((img, idx) => (
+                     <Image
                       className="object-fill aspect-video h-40 max-w-full rounded-md object-cover inline-block"
-                      src={carimage[2]}
+                      src={img}
                       alt=""
                     />
-                    <Image
-                      className="object-fill aspect-video h-40 max-w-full rounded-md object-cover inline-block"
-                      src={carimage[0]}
-                      alt=""
-                    />
-                    <Image
-                      className="object-fill aspect-video h-40 max-w-full rounded-md object-cover inline-block"
-                      src={carimage[4]}
-                      alt=""
-                    />
-                    <Image
-                      className="object-fill aspect-video h-40 max-w-full rounded-md object-cover inline-block"
-                      src={carimage[3]}
-                      alt=""
-                    />
-                    <Image
-                      className="object-fill aspect-video h-40 max-w-full rounded-md object-cover inline-block"
-                      src={carimage[1]}
-                      alt=""
-                    />
+                  ))}
                   </div>
                 </div>
               </StyledWrapper>

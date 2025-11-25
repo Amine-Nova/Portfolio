@@ -3,7 +3,7 @@ import React from "react";
 const socialEnd = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-6 z-40">
-      <p className="text-blue-200 text-[16px]">
+      <p className="text-blue-200 text-[19px]">
         Feel free to reach out to me on :
       </p>
       <div className="flex justify-center items-center gap-6 z-40">
@@ -60,6 +60,24 @@ const socialEnd = () => {
             <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
           </svg>
         </a>
+        <a
+        id="mail"
+        href="mailto:bmamine52@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg
+          className="hover:fill-yellow-500 stroke-blue-200 w-9 h-9 stroke-[1.8px] hover:scale-125 transition-transform duration-500"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M6.47,10.71a2,2,0,0,0-2,2V35.32a2,2,0,0,0,2,2H41.53a2,2,0,0,0,2-2V12.68a2,2,0,0,0-2-2H6.47Zm33.21,3.82L24,26.07,8.32,14.53" />
+        </svg>
+      </a>
         <a href="https://wa.me/+212681212573" target='_blank' rel="noopener noreferrer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
