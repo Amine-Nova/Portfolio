@@ -44,9 +44,9 @@ import docker5 from '../Docker/abenmous-docker6.webp';
 // MiniShell Images
 
 import minishell from '../Projects/abenmous-icon-shell.webp';
-import minishell0 from '../MiniShell/abenmous-minishell.webp';
-import minishell1 from '../MiniShell/abenmous-minishell1.webp';
-import minishell2 from '../MiniShell/abenmous-minishell2.webp';
+import minishell0 from '../Minishell/abenmous-minishell.webp';
+import minishell1 from '../Minishell/abenmous-minishell1.webp';
+import minishell2 from '../Minishell/abenmous-minishell2.webp';
 
 /////////////////////////////////////////////////////////////
 
